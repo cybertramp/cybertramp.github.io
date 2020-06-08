@@ -3,7 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cybertramp.net/categories/</loc>
+    <lastmod>2020-06-09T00:05:21+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://cybertramp.net/posts/</loc>
+    <lastmod>2020-06-09T00:05:21+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/categories/tip/</loc>
     <lastmod>2020-06-09T00:05:21+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -12,13 +26,6 @@
   <url>
     <loc>https://cybertramp.net/2020/06/what_the_character_m/</loc>
     <lastmod>2020-06-09T00:05:21+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cybertramp.net/categories/</loc>
-    <lastmod>2020-05-17T17:11:27+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

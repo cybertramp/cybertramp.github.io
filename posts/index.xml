@@ -5,10 +5,19 @@
     <link>https://cybertramp.net/posts/</link>
     <description>Recent content in Posts on Cybertramp&#39;s DB</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 May 2020 17:11:27 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 00:05:21 +0900</lastBuildDate>
     
         <atom:link href="https://cybertramp.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>특수 문자 ^M 처리하기</title>
+      <link>https://cybertramp.net/2020/06/what_the_character_m/</link>
+      <pubDate>Tue, 09 Jun 2020 00:05:21 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/2020/06/what_the_character_m/</guid>
+      <description>이 문제가 왜 발생했는지는 모르겠다. 그냥 갑자기 발생했다. visual studio code에서 특정 폴더를 열고 파일의 행을 복사해서 사용하던 도중 발생한 문제였다. 윈도우에서 편</description>
+    </item>
     
     <item>
       <title>다시 시작하는 블로그</title>
@@ -26,7 +35,10 @@
       
       <guid>https://cybertramp.net/about/</guid>
       <description>Hi! I&amp;rsquo;m Cybertramp.
-I live in Korea, of course South Korea.</description>
+I live in Korea, of course South Korea. I recently started working for a company. Previously, I studied at Sang-Myung university.
+My commute time is close to 4 hours. but company people are kind and company is passionate. So I can stand.
+I like anything computer related. For instance, IoT, a lot of Linux distro, building PC, building NAS, Docker, Block chain&amp;hellip;. etc..
+My main language is Python, C, J</description>
     </item>
     
   </channel>

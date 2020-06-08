@@ -35,10 +35,18 @@
       
       <guid>https://cybertramp.net/about/</guid>
       <description>Hi! I&amp;rsquo;m Cybertramp.
-I live in Korea, of course South Korea. I recently started working for a company. Previously, I studied at Sang-Myung university.
-My commute time is close to 4 hours. but company people are kind and company is passionate. So I can stand.
+I live in Korea, of course South Korea. I recently started working for FADU. Previously, I studied at Sang-Myung university.
 I like anything computer related. For instance, IoT, a lot of Linux distro, building PC, building NAS, Docker, Block chain&amp;hellip;. etc..
-My main language is Python, C, J</description>
+My certifications are PC master, Linux master, Network Manager, Redhat RHCSA, ITQ. If possible, I try to get Redhat RHCE this year. XD</description>
+    </item>
+    
+    <item>
+      <title>나의 프로젝트들..</title>
+      <link>https://cybertramp.net/projects/</link>
+      <pubDate>Sun, 17 May 2020 16:39:37 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/projects/</guid>
+      <description>Below is the project I did. Penguin Adventure - 2019 Witab - 2019 OpenSSL with c - 2019 FaceSwap with OpenCV4 - 2019 QBQB-RabbitMQ - 2018 tensorflow-box - 2018 File Shooter - 2018 MATLAB-BiorythmGUI - 2018</description>
     </item>
     
   </channel>

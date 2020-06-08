@@ -59,6 +59,13 @@
   </url>
   
   <url>
+    <loc>https://cybertramp.net/projects/</loc>
+    <lastmod>2020-05-17T16:39:37+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://cybertramp.net/series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

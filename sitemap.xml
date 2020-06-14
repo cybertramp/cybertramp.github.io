@@ -4,14 +4,28 @@
   
   <url>
     <loc>https://cybertramp.net/categories/</loc>
-    <lastmod>2020-06-09T00:05:21+09:00</lastmod>
+    <lastmod>2020-06-15T00:12:30+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/categories/db/</loc>
+    <lastmod>2020-06-15T00:12:30+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/2020/06/mongodb/</loc>
+    <lastmod>2020-06-15T00:12:30+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://cybertramp.net/posts/</loc>
-    <lastmod>2020-06-09T00:05:21+09:00</lastmod>
+    <lastmod>2020-06-15T00:12:30+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

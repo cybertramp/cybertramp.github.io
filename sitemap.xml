@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://cybertramp.net/categories/</loc>
-    <lastmod>2020-06-15T00:12:30+09:00</lastmod>
+    <lastmod>2020-06-15T20:45:15+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/2020/06/nvmecli_plugins/</loc>
+    <lastmod>2020-06-15T20:45:15+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/posts/</loc>
+    <lastmod>2020-06-15T20:45:15+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/categories/ssd/</loc>
+    <lastmod>2020-06-15T20:45:15+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/2020/06/django/</loc>
+    <lastmod>2020-06-15T20:44:52+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/categories/webserver/</loc>
+    <lastmod>2020-06-15T20:44:52+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -18,13 +53,6 @@
   
   <url>
     <loc>https://cybertramp.net/2020/06/mongodb/</loc>
-    <lastmod>2020-06-15T00:12:30+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cybertramp.net/posts/</loc>
     <lastmod>2020-06-15T00:12:30+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

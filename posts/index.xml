@@ -5,10 +5,28 @@
     <link>https://cybertramp.net/posts/</link>
     <description>Recent content in Posts on Cybertramp&#39;s DB</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 15 Jun 2020 00:12:30 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2020 20:45:15 +0900</lastBuildDate>
     
         <atom:link href="https://cybertramp.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NVMe-cli plugin 추가하기</title>
+      <link>https://cybertramp.net/2020/06/nvmecli_plugins/</link>
+      <pubDate>Mon, 15 Jun 2020 20:45:15 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/2020/06/nvmecli_plugins/</guid>
+      <description>1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다. mkdir -p plugins/todd plugins/todd/todd-nvme.h #undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME #include &amp;quot;cmd.h&amp;quot; #include &amp;lt;stdio.h&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Django 설치</title>
+      <link>https://cybertramp.net/2020/06/django/</link>
+      <pubDate>Mon, 15 Jun 2020 20:44:52 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/2020/06/django/</guid>
+      <description>Django 1. Installation (1) venv 설치 개발 환경을 깔끔하게 관리하기 위한 도구 mkdir v1 cd v1 sudo apt install python3-venv -y python3 -m venv v1 # 개발환경 적용 source v1/bin/activate (2) Django 설치 python3 -m pip install --upgrade pip pip install django~=2.0.0 mkdir project1 django-admin startproject mysite . 다음과 같은</description>
+    </item>
     
     <item>
       <title>MongoDB 설치 및 사용</title>

@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        Cybertramp&#39;s DB</title>
+        NVMe-cli plugin 추가하기 - Cybertramp&#39;s DB
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -18,24 +19,32 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다. mkdir -p plugins/todd plugins/todd/todd-nvme.h #undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME #include &amp;quot;cmd.h&amp;quot; #include &amp;lt;stdio.h&amp;gt;" />
     <meta name="generator" content="Hugo 0.70.0 with theme pure" />
-    <title>Cybertramp&#39;s DB</title>
+    <title>NVMe-cli plugin 추가하기 - Cybertramp&#39;s DB</title>
     
     
     <link rel="stylesheet" href="https://cybertramp.net/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cybertramp.net/404.html" />
+    <meta property="og:title" content="NVMe-cli plugin 추가하기" />
+<meta property="og:description" content="1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다. mkdir -p plugins/todd plugins/todd/todd-nvme.h #undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME #include &quot;cmd.h&quot; #include &lt;stdio.h&gt;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cybertramp.net/2020/06/nvmecli_plugins/" />
+<meta property="article:published_time" content="2020-06-15T20:45:15+09:00" />
+<meta property="article:modified_time" content="2020-06-15T20:45:15+09:00" />
+<meta itemprop="name" content="NVMe-cli plugin 추가하기">
+<meta itemprop="description" content="1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다. mkdir -p plugins/todd plugins/todd/todd-nvme.h #undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME #include &quot;cmd.h&quot; #include &lt;stdio.h&gt;">
+<meta itemprop="datePublished" content="2020-06-15T20:45:15&#43;09:00" />
+<meta itemprop="dateModified" content="2020-06-15T20:45:15&#43;09:00" />
+<meta itemprop="wordCount" content="202">
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NVMe-cli plugin 추가하기"/>
+<meta name="twitter:description" content="1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다. mkdir -p plugins/todd plugins/todd/todd-nvme.h #undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME #include &quot;cmd.h&quot; #include &lt;stdio.h&gt;"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -222,64 +231,187 @@
 
     
     
-<main class="main" role="main">
-    <div class="content">
-        <article class="article">
-            <div class="article-header">
-                <h1 class="article-title" itemprop="name">
-                    <a href="#">404 Not Found</a>
-                </h1>
-            </div>
-            <div class="article-meta">
-                
-
-                <span class="post-comment"><i class="icon icon-comment"></i> <a href="/404.html#comments"
-                        class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 0words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 0minutes </span>
-            </div>
-            <div class="article-entry marked-body" itemprop="articleBody">
-                <br>
-                <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
-                <a href="/">Go Back</a>
-            </div>
-            <div class="article-footer">
-<blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    <li class="post-copyright-link hidden-xs">
-      <strong>Permalink: </strong>
-      <a href="https://cybertramp.net/404.html" title="404 Page not found" target="_blank" rel="external">https://cybertramp.net/404.html</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
-    </li>
-  </ul>
-</blockquote>
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://cybertramp.net" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="https://cybertramp.net/avatar.png" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://cybertramp.net" target="_blank"><span class="text-dark">cybertramp</span><small class="ml-1x">Gloomy friday</small></a></h3>
-        <div>I like computer</div>
-      </div>
-    </figure>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+    </nav>
   </div>
-</div>
-            </div>
-        </article>
+</aside>
+
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/06/nvmecli_plugins/"
+    >NVMe-cli plugin 추가하기</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://cybertramp.net/2020/06/nvmecli_plugins/" class="article-date">
+  <time datetime="2020-06-15 20:45:15 &#43;0900 KST" itemprop="datePublished">2020-06-15</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/ssd/"> ssd </a>
+</span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/06/nvmecli_plugins/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 202words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h4 id="1-클론컴파일설치">1. 클론/컴파일/설치</h4>
+<pre><code class="language-bash">git clone https://github.com/linux-nvme/nvme-cli.git
+cd nvme-cli
+make
+make install
+
+# RUN
+nvme --version
+</code></pre>
+<h4 id="2-커스텀-플러그인-추가">2. 커스텀 플러그인 추가</h4>
+<p>플러그인은 todd라는 명으로 추가한다.</p>
+<pre><code class="language-bash">mkdir -p plugins/todd
+</code></pre>
+<ul>
+<li>
+<p><code>plugins/todd/todd-nvme.h</code></p>
+<pre><code class="language-c">#undef CMD_INC_FILE
+#define CMD_INC_FILE plugins/todd/todd-nvme
+  
+#if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ)
+#define TODD_NVME
+  
+#include &quot;cmd.h&quot;
+#include &lt;stdio.h&gt;
+  
+PLUGIN(NAME(&quot;todd&quot;, &quot;Todd plugin&quot;),
+        COMMAND_LIST(
+                ENTRY(&quot;list&quot;,&quot;List available FADU devices&quot;,todd_list)
+        )
+);
+  
+#endif
+  
+#include &quot;define_cmd.h&quot;
+</code></pre>
+</li>
+<li>
+<p><code>plugins/todd/todd-nvme.c</code></p>
+<pre><code class="language-bash">#include &quot;nvme.h&quot;
+  
+#define CREATE_CMD
+#include &quot;todd-nvme.h&quot;
+  
+static int todd_list(int argc, char **argv, struct command *cmd, struct plugin *plugin){
+        printf(&quot;Hello world!&quot;);
+        return 0;
+}
+</code></pre>
+</li>
+<li>
+<p><code>Makefile</code></p>
+<pre><code class="language-bash"># 변경전
+PLUGIN_OBJS :=                                  \
+        plugins/intel/intel-nvme.o              \
+        plugins/lnvm/lnvm-nvme.o                \
+        plugins/memblaze/memblaze-nvme.o        \
+        plugins/wdc/wdc-nvme.o                  \
+        plugins/wdc/wdc-utils.o                 \
+        plugins/huawei/huawei-nvme.o            \
+        plugins/netapp/netapp-nvme.o            \
+        plugins/toshiba/toshiba-nvme.o          \
+        plugins/micron/micron-nvme.o            \
+        plugins/seagate/seagate-nvme.o          \
+        plugins/virtium/virtium-nvme.o          \
+        plugins/shannon/shannon-nvme.o          \
+        plugins/dera/dera-nvme.o
+          
+# 변경후
+PLUGIN_OBJS :=                                  \
+        plugins/intel/intel-nvme.o              \
+        plugins/lnvm/lnvm-nvme.o                \
+        plugins/memblaze/memblaze-nvme.o        \
+        plugins/wdc/wdc-nvme.o                  \
+        plugins/wdc/wdc-utils.o                 \
+        plugins/huawei/huawei-nvme.o            \
+        plugins/netapp/netapp-nvme.o            \
+        plugins/toshiba/toshiba-nvme.o          \
+        plugins/micron/micron-nvme.o            \
+        plugins/seagate/seagate-nvme.o          \
+        plugins/virtium/virtium-nvme.o          \
+        plugins/shannon/shannon-nvme.o          \
+        plugins/dera/dera-nvme.o                \
+        plugins/todd/todd-nvme.o
+  
+</code></pre>
+</li>
+<li>
+<p>컴파일/설치/실행</p>
+<pre><code class="language-bash">pwd
+/root/nvme-cli
+  
+# run on root permission state!
+make clean
+make
+make install
+  
+# run 
+/usr/sbin/nvme
+nvme todd list
+</code></pre>
+<p><img src="/img/image-20200423134713400.png" alt="image-20200423134713400"></p>
+</li>
+</ul>
+
+    </div>
+    
+  </article>
 <section id="comments">
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </section>
 
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://cybertramp.net/2020/06/django/" title="Django 설치"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites=""
+                data-mobile-sites=""></div>
+        </div>
     </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
   
   <div class="copyright">
@@ -345,6 +477,19 @@
         
         hasInnerContainers: true,
     });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/cybertramp.net\/2020\/06\/nvmecli_plugins\/';
+        this.page.identifier = 'cybertramp-net';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'cybertramp-net' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
 <script type="application/javascript">

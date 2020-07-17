@@ -10,7 +10,7 @@
   </url>
   
   <url>
-    <loc>https://cybertramp.net/2020/06/nvmecli_plugins/</loc>
+    <loc>https://cybertramp.net/2020/06/0004/</loc>
     <lastmod>2020-06-15T20:45:15+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -31,7 +31,7 @@
   </url>
   
   <url>
-    <loc>https://cybertramp.net/2020/06/django/</loc>
+    <loc>https://cybertramp.net/2020/06/0001/</loc>
     <lastmod>2020-06-15T20:44:52+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -52,7 +52,7 @@
   </url>
   
   <url>
-    <loc>https://cybertramp.net/2020/06/mongodb/</loc>
+    <loc>https://cybertramp.net/2020/06/0002/</loc>
     <lastmod>2020-06-15T00:12:30+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -66,7 +66,7 @@
   </url>
   
   <url>
-    <loc>https://cybertramp.net/2020/06/what_the_character_m/</loc>
+    <loc>https://cybertramp.net/2020/06/0005/</loc>
     <lastmod>2020-06-09T00:05:21+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -80,7 +80,7 @@
   </url>
   
   <url>
-    <loc>https://cybertramp.net/2020/05/my_first_post/</loc>
+    <loc>https://cybertramp.net/2020/05/0003/</loc>
     <lastmod>2020-05-17T17:11:27+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -103,6 +103,41 @@
   <url>
     <loc>https://cybertramp.net/projects/</loc>
     <lastmod>2020-05-17T16:39:37+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/2019/11/0006/</loc>
+    <lastmod>2019-11-23T00:01:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/2019/10/dlib/</loc>
+    <lastmod>2019-10-28T00:05:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/categories/opencv/</loc>
+    <lastmod>2019-10-28T00:05:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/2019/10/powerppc/</loc>
+    <lastmod>2019-10-27T00:05:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cybertramp.net/categories/ppc64/</loc>
+    <lastmod>2019-10-27T00:05:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

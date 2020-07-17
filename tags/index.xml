@@ -11,46 +11,46 @@
     
     <item>
       <title>NVMe-cli 설치 및 플러그인 추가</title>
-      <link>https://cybertramp.net/2020/06/nvmecli_plugins/</link>
+      <link>https://cybertramp.net/2020/06/0004/</link>
       <pubDate>Mon, 15 Jun 2020 20:45:15 +0900</pubDate>
       
-      <guid>https://cybertramp.net/2020/06/nvmecli_plugins/</guid>
+      <guid>https://cybertramp.net/2020/06/0004/</guid>
       <description>1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다. mkdir -p plugins/todd plugins/todd/todd-nvme.h #undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME #include &amp;quot;cmd.h&amp;quot; #include &amp;lt;stdio.h&amp;gt;</description>
     </item>
     
     <item>
       <title>Django 설치</title>
-      <link>https://cybertramp.net/2020/06/django/</link>
+      <link>https://cybertramp.net/2020/06/0001/</link>
       <pubDate>Mon, 15 Jun 2020 20:44:52 +0900</pubDate>
       
-      <guid>https://cybertramp.net/2020/06/django/</guid>
+      <guid>https://cybertramp.net/2020/06/0001/</guid>
       <description>Django 1. Installation (1) venv 설치 개발 환경을 깔끔하게 관리하기 위한 도구 mkdir v1 cd v1 sudo apt install python3-venv -y python3 -m venv v1 # 개발환경 적용 source v1/bin/activate (2) Django 설치 python3 -m pip install --upgrade pip pip install django~=2.0.0 mkdir project1 django-admin startproject mysite . 다음과 같은</description>
     </item>
     
     <item>
       <title>MongoDB 설치 및 사용</title>
-      <link>https://cybertramp.net/2020/06/mongodb/</link>
+      <link>https://cybertramp.net/2020/06/0002/</link>
       <pubDate>Mon, 15 Jun 2020 00:12:30 +0900</pubDate>
       
-      <guid>https://cybertramp.net/2020/06/mongodb/</guid>
+      <guid>https://cybertramp.net/2020/06/0002/</guid>
       <description>참고 1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo &amp;quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse&amp;quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관</description>
     </item>
     
     <item>
       <title>특수 문자 ^M 처리하기</title>
-      <link>https://cybertramp.net/2020/06/what_the_character_m/</link>
+      <link>https://cybertramp.net/2020/06/0005/</link>
       <pubDate>Tue, 09 Jun 2020 00:05:21 +0900</pubDate>
       
-      <guid>https://cybertramp.net/2020/06/what_the_character_m/</guid>
+      <guid>https://cybertramp.net/2020/06/0005/</guid>
       <description>이 문제가 왜 발생했는지는 모르겠다. 그냥 갑자기 발생했다. visual studio code에서 특정 폴더를 열고 파일의 행을 복사해서 사용하던 도중 발생한 문제였다. 윈도우에서 편</description>
     </item>
     
     <item>
       <title>다시 시작하는 블로그</title>
-      <link>https://cybertramp.net/2020/05/my_first_post/</link>
+      <link>https://cybertramp.net/2020/05/0003/</link>
       <pubDate>Sun, 17 May 2020 17:11:27 +0900</pubDate>
       
-      <guid>https://cybertramp.net/2020/05/my_first_post/</guid>
+      <guid>https://cybertramp.net/2020/05/0003/</guid>
       <description>1년이나 지나서야 다시 블로그를 시작하려고한다. 너무 많은 일들과 시간이 지나가 버렸지만.. 제대로 다시 한번 정보도 기록하고 공유하면서 사용하려고한다. 아마</description>
     </item>
     
@@ -73,6 +73,33 @@ My certifications are PC master, Linux master, Network Manager, Redhat RHCSA, IT
       
       <guid>https://cybertramp.net/projects/</guid>
       <description>Below is the project I did. Penguin Adventure - 2019 Witab - 2019 OpenSSL with c - 2019 FaceSwap with OpenCV4 - 2019 QBQB-RabbitMQ - 2018 tensorflow-box - 2018 File Shooter - 2018 MATLAB-BiorythmGUI - 2018</description>
+    </item>
+    
+    <item>
+      <title>Windows Terminal에서 시작 디렉토리 지정하기</title>
+      <link>https://cybertramp.net/2019/11/0006/</link>
+      <pubDate>Sat, 23 Nov 2019 00:01:00 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/2019/11/0006/</guid>
+      <description>Windows Terminal을 설치하고 실행하면 경로가 윈도우의 홈 디렉토리로 시작하게 된다. 작업하는데 매번 해당 경로를 타고 다시 이동해야하는 번거로움을 줄이기 위해</description>
+    </item>
+    
+    <item>
+      <title>Dlib 설치</title>
+      <link>https://cybertramp.net/2019/10/dlib/</link>
+      <pubDate>Mon, 28 Oct 2019 00:05:00 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/2019/10/dlib/</guid>
+      <description>Dlib 설치 &amp;amp; 연동 [1] Dlib 설치 사전 상태 opencv4 버전, Visual Studio community 2019가 설치되어 있음 1. dlib 다운 공식페이지에서 다운로드 받고 압축풀기 2. Cmake 다운 &amp;amp; 실행 공식페이지에서 Bia</description>
+    </item>
+    
+    <item>
+      <title>PowerPC64 환경에서 CentOS7</title>
+      <link>https://cybertramp.net/2019/10/powerppc/</link>
+      <pubDate>Sun, 27 Oct 2019 00:05:00 +0900</pubDate>
+      
+      <guid>https://cybertramp.net/2019/10/powerppc/</guid>
+      <description>Ubuntu 환경 위에서 qemu-system-ppc를 통해 CentOS 7을 실행한다. 하루를 삽질했다&amp;hellip;ㅠ 1. 설치 1) CentOS7 minimal 다운로드 ppc 아키텍쳐 버전의 Cent</description>
     </item>
     
   </channel>

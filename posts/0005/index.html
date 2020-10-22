@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <title>특수 문자 ^M 처리하기 - Inkblotty</title>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='https://cybertramp.net/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://cybertramp.net/css/custom.css' type='text/css' media='all' />
+        
+</head>
+    <body class="two-column">
+        <a href="#content">Skip to content</a>
+<div class="wrapper">
+    <header role="banner" class="banner widgets columns-1">
+        <a href="/" rel="home">
+            <h1 class="site">Inkblotty</h1>
+            <p></p>
+        </a>
+        <nav role="navigation" aria-label="Primary Navigation">
+
+            <ul class="menu">
+                <li class="menu-item "><a class="menu__link" href="/about/">ABOUT</a></li>
+            </ul>
+            <select onChange="location.href=value;">
+                <option value="/about/" class="menu-item menu-item-type-custom menu-item-object-custom" >ABOUT</option>
+            </select>
+        </nav>
+    </header>
+
+    <br>
+    <div style="width: 100%; max-height: 100px; text-align: center;">
+       
+</div>
+
+    <div class="breadcrumbs">
+        
+    </div>
+        <div id="content" class="content">
+
+<main role="main">
+    <article role="article" class="post type-post format-standard hentry">
+        <header class="post-header">
+            <h1>특수 문자 ^M 처리하기</h1>
+            <div class="post-details">
+                <a rel="bookmark">
+                    <time datetime="2020-06-09T69:125:216">2020-06-09</time>
+                </a>
+				
+<span style="float: right;">
+    <div id="fb-root" style="height: 100%;"></div>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    
+    <div class="fb-share-button" data-href="https://cybertramp.net/posts/0005/" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcybertramp.net%2fposts%2f0005%2f" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+    &nbsp;
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="특수 문자 ^M 처리하기" data-url="https://cybertramp.net/posts/0005/" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    &nbsp;
+    
+</span>
+
+            </div>
+        </header>
+
+        <div class="post-content">
+            <p><img src="/img/img001.png" alt="img001"></p>
+<p>이 문제가 왜 발생했는지는 모르겠다. 그냥 갑자기 발생했다. visual studio code에서 특정 폴더를 열고 파일의 행을 복사해서 사용하던 도중 발생한 문제였다.</p>
+<p>윈도우에서 편집시 개행문자가 붙어서 저장되는데 이를 Unix기반에서 읽는 경우 발생하는 문제라고한다.</p>
+<p>분명 또 다시 찾을 내 자신을 걱정하며 기록해둔다.</p>
+<h3 id="1번-방법-vi">1번 방법: vi</h3>
+<p>이건 vi 에서 해당 문자를 제거하는 방법을 설명이다.</p>
+<p>일단 이 망할 문자는 CTRL + v와 m 키를 누르면 생성된다.</p>
+<p><code>vi -b 파일명</code></p>
+<p>-b 옵션은 바이너리 모드로 여는 옵션이다. 이렇게 해야 이상한 개행문자가 잘보인다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:%s/^M$//g
+</code></pre></div><p>여기서 중요한건 <strong><!-- raw HTML omitted --><code>^M</code> 부분은 CTRL+v CTRL+m을 눌러야 생기는 문자<!-- raw HTML omitted --></strong>라는 것이다.</p>
+<p>저렇게 바꾸고 저장하면된다.</p>
+<p><code>sed</code> 커맨드로도 가능하지만 생략한다.</p>
+
+        </div>
+
+        <div>
+        <div id="disqus_thread"></div>
+        <script>
+
+            
+
+
+
+(function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-cybertramp-net.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+
+        <footer class="post-footer">
+                
+                
+                
+                <span class="post-categories">
+                        <a href="https://cybertramp.net/categories/tip/">tip</a>&emsp;
+                        
+                </span>
+                
+        
+                
+                
+                
+        </footer>
+        
+<table cellspacing="15" style="width:100%; border: none;">
+    <tr>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+    </tr>
+</table>
+
+        
+    </article>
+
+    
+
+</main>
+
+
+        <div class="sidebar1 widgets columns-1">
+
+    <aside>
+    
+</aside>
+    <aside class="widget widget_categories">
+        <h2></h2>
+        <ul class="widget__list"><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/daily/">daily (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/db/">DB (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/opencv/">opencv (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/ppc64/">ppc64 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/ssd/">ssd (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/tip/">tip (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/webserver/">webserver (1)</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_tag_cloud">
+        <h2></h2>
+        <div class="tagcloud">
+        </div>
+    </aside>
+
+    <aside class="widget widget_recent_entries">
+        <h2></h2>
+        <ul>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_archive">
+        <h2></h2>
+        <ul>
+        </ul>
+    </aside>
+
+</div>
+        </div>
+        </div>
+<footer role="contentinfo" class="document-footer contentinfo widgets columns-1">
+
+    <aside class="widget widget_text">
+        <div class="textwidget">
+            <p>© Inkblotty / Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/tosi29/inkblotty" target="_blank">Inkblotty</a></p>
+        </div>
+    </aside>
+</footer>
+</div>
+
+    </body>
+</html>

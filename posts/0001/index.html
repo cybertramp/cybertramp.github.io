@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <title>Django 설치 - Inkblotty</title>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='https://cybertramp.net/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://cybertramp.net/css/custom.css' type='text/css' media='all' />
+        
+</head>
+    <body class="two-column">
+        <a href="#content">Skip to content</a>
+<div class="wrapper">
+    <header role="banner" class="banner widgets columns-1">
+        <a href="/" rel="home">
+            <h1 class="site">Inkblotty</h1>
+            <p></p>
+        </a>
+        <nav role="navigation" aria-label="Primary Navigation">
+
+            <ul class="menu">
+                <li class="menu-item "><a class="menu__link" href="/about/">ABOUT</a></li>
+            </ul>
+            <select onChange="location.href=value;">
+                <option value="/about/" class="menu-item menu-item-type-custom menu-item-object-custom" >ABOUT</option>
+            </select>
+        </nav>
+    </header>
+
+    <br>
+    <div style="width: 100%; max-height: 100px; text-align: center;">
+       
+</div>
+
+    <div class="breadcrumbs">
+        
+    </div>
+        <div id="content" class="content">
+
+<main role="main">
+    <article role="article" class="post type-post format-standard hentry">
+        <header class="post-header">
+            <h1>Django 설치</h1>
+            <div class="post-details">
+                <a rel="bookmark">
+                    <time datetime="2020-06-15T615:844:526">2020-06-15</time>
+                </a>
+				
+<span style="float: right;">
+    <div id="fb-root" style="height: 100%;"></div>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    
+    <div class="fb-share-button" data-href="https://cybertramp.net/posts/0001/" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcybertramp.net%2fposts%2f0001%2f" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+    &nbsp;
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Django 설치" data-url="https://cybertramp.net/posts/0001/" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    &nbsp;
+    
+</span>
+
+            </div>
+        </header>
+
+        <div class="post-content">
+            <h2 id="django">Django</h2>
+<h3 id="1-installation">1. Installation</h3>
+<h4 id="1-venv-설치">(1) venv 설치</h4>
+<p>개발 환경을 깔끔하게 관리하기 위한 도구</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir v1
+cd v1
+
+sudo apt install python3-venv -y
+python3 -m venv v1
+
+<span style="color:#75715e"># 개발환경 적용</span>
+source v1/bin/activate
+</code></pre></div><h4 id="2-django-설치">(2) Django 설치</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3 -m pip install --upgrade pip
+pip install django~<span style="color:#f92672">=</span>2.0.0
+
+mkdir project1
+django-admin startproject mysite .
+</code></pre></div><p>다음과 같은 구조로 파일이 생성됨</p>
+<ul>
+<li>
+<p>생성된 구조</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── manage.py
+└── mysite
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-36.pyc
+    │   └── settings.cpython-36.pyc
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+  
+<span style="color:#ae81ff">2</span> directories, <span style="color:#ae81ff">7</span> files
+</code></pre></div></li>
+</ul>
+<h4 id="3-설정-변경">(3) 설정 변경</h4>
+<ul>
+<li>
+<p>타임존/정적파일 위치 변경</p>
+<p>기존 것을 변경하되 없으면 추가</p>
+<p><code>mysite/settings.py</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TIME_ZONE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Asia/Seoul&#39;</span>
+  
+STATIC_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/static/&#39;</span>
+STATIC_ROOT <span style="color:#f92672">=</span> os.path.join<span style="color:#f92672">(</span>BASE_DIR, <span style="color:#e6db74">&#39;static&#39;</span><span style="color:#f92672">)</span>
+</code></pre></div></li>
+</ul>
+<h4 id="4-db-설정">(4) DB 설정</h4>
+<p>Django는 기본적으로 sqlite3가 적용되어 있음</p>
+<p><code>mysite/settings.py</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">DATABASES <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#39;default&#39;</span>: <span style="color:#f92672">{</span>
+        <span style="color:#e6db74">&#39;ENGINE&#39;</span>: <span style="color:#e6db74">&#39;django.db.backends.sqlite3&#39;</span>,
+        <span style="color:#e6db74">&#39;NAME&#39;</span>: os.path.join<span style="color:#f92672">(</span>BASE_DIR, <span style="color:#e6db74">&#39;db.sqlite3&#39;</span><span style="color:#f92672">)</span>,
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>SITE에 DB를 생성하기 위해서는 커맨드를 실행해야함</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py migrate
+</code></pre></div><h4 id="5-서버-실행">(5) 서버 실행</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py runserver
+</code></pre></div><p><img src="/img/image-20200504165655390.png" alt="image-20200504165655390"></p>
+<p><img src="/img/image-20200504182023942.png" alt="image-20200504182023942"></p>
+<h3 id="2-app-만들기">2. App 만들기</h3>
+<h4 id="1-생성">(1) 생성</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py startapp blog
+</code></pre></div><p><img src="/img/image-20200504182158123.png" alt="image-20200504182158123"></p>
+
+        </div>
+
+        <div>
+        <div id="disqus_thread"></div>
+        <script>
+
+            
+
+
+
+(function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-cybertramp-net.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+
+        <footer class="post-footer">
+                
+                
+                
+                <span class="post-categories">
+                        <a href="https://cybertramp.net/categories/webserver/">webserver</a>&emsp;
+                        
+                </span>
+                
+        
+                
+                
+                
+        </footer>
+        
+<table cellspacing="15" style="width:100%; border: none;">
+    <tr>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+    </tr>
+</table>
+
+        
+    </article>
+
+    
+
+</main>
+
+
+        <div class="sidebar1 widgets columns-1">
+
+    <aside>
+    
+</aside>
+    <aside class="widget widget_categories">
+        <h2></h2>
+        <ul class="widget__list"><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/daily/">daily (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/db/">DB (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/opencv/">opencv (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/ppc64/">ppc64 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/ssd/">ssd (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/tip/">tip (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cybertramp.net/categories/webserver/">webserver (1)</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_tag_cloud">
+        <h2></h2>
+        <div class="tagcloud">
+        </div>
+    </aside>
+
+    <aside class="widget widget_recent_entries">
+        <h2></h2>
+        <ul>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_archive">
+        <h2></h2>
+        <ul>
+        </ul>
+    </aside>
+
+</div>
+        </div>
+        </div>
+<footer role="contentinfo" class="document-footer contentinfo widgets columns-1">
+
+    <aside class="widget widget_text">
+        <div class="textwidget">
+            <p>© Inkblotty / Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/tosi29/inkblotty" target="_blank">Inkblotty</a></p>
+        </div>
+    </aside>
+</footer>
+</div>
+
+    </body>
+</html>

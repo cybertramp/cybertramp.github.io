@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on Cybertramp&#39;s Blog</title>
-    <link>https://cybertramp.net/categories/linux/</link>
+    <link>/categories/linux/</link>
     <description>Recent content in linux on Cybertramp&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CentOS7에서 Python3.7 설치</title>
-      <link>https://cybertramp.net/posts/2020/centos7%EC%97%90%EC%84%9C-python3.7-%EC%84%A4%EC%B9%98/</link>
+      <link>/post/centos7_python3.7_installation/</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cybertramp.net/posts/2020/centos7%EC%97%90%EC%84%9C-python3.7-%EC%84%A4%EC%B9%98/</guid>
+      <guid>/post/centos7_python3.7_installation/</guid>
       <description>CentOS7에서는 기본으로 Python3.7이 없다. yum을 통해 설치하려해도 Python 3.6뿐이다. 아래는 직접 다운로드 하여 컴파일 설치하는 방법이다.
  Root 권한으로 진행합니다.
  1. 설치전 필요한 패키지 설치 yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y 2. 다운로드 &amp;amp; 설치 # Download &amp;amp; Decompress cd /usr/src wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz tar xzf Python-3.7.9.tgz # Create makefile &amp;amp; make cd Python-3.7.9 ./configure --enable-optimizations make altinstall # remove installation file rm /usr/src/Python-3.7.9.tgz 3. 버전 확인 설치된 Python3.</description>

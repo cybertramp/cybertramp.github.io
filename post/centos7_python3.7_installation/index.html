@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko-kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b1b1b">
+	<title>CentOS7에서 Python3.7 설치 | Cybertramp&#39;s Blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="CentOS7에서 Python3.7 설치" />
+<meta property="og:description" content="CentOS7에서는 기본으로 Python3.7이 없다. yum을 통해 설치하려해도 Python 3.6뿐이다. 아래는 직접 다운로드 하여 컴파일 설치하는 방법이다.
+ Root 권한으로 진행합니다.
+ 1. 설치전 필요한 패키지 설치 yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y 2. 다운로드 &amp; 설치 # Download &amp; Decompress cd /usr/src wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz tar xzf Python-3.7.9.tgz # Create makefile &amp; make cd Python-3.7.9 ./configure --enable-optimizations make altinstall # remove installation file rm /usr/src/Python-3.7.9.tgz 3. 버전 확인 설치된 Python3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/centos7_python3.7_installation/" />
+<meta property="article:published_time" content="2020-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-09T00:00:00+00:00" />
+
+		<meta itemprop="name" content="CentOS7에서 Python3.7 설치">
+<meta itemprop="description" content="CentOS7에서는 기본으로 Python3.7이 없다. yum을 통해 설치하려해도 Python 3.6뿐이다. 아래는 직접 다운로드 하여 컴파일 설치하는 방법이다.
+ Root 권한으로 진행합니다.
+ 1. 설치전 필요한 패키지 설치 yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y 2. 다운로드 &amp; 설치 # Download &amp; Decompress cd /usr/src wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz tar xzf Python-3.7.9.tgz # Create makefile &amp; make cd Python-3.7.9 ./configure --enable-optimizations make altinstall # remove installation file rm /usr/src/Python-3.7.9.tgz 3. 버전 확인 설치된 Python3.">
+<meta itemprop="datePublished" content="2020-09-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="102">
+
+
+
+<meta itemprop="keywords" content="" />
+
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/themes/dark-blue.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+	<link rel="manifest" href="/manifest.json">
+		
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">Cybertramp&#39;s Blog</a>
+	
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">/</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/post/">Posts</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">CentOS7에서 Python3.7 설치</li>
+	</ol>
+</nav>
+		<div class="single block">
+			<article class="entry">
+	<div class="entry__meta meta mb">
+	<time class="entry__meta-published meta-published" datetime="2020-09-09T00:00:00Z">2020, September 09</time>
+<span class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/linux/" rel="category">linux</a>
+	</span>
+</span>
+	</div>
+				<h1 class="entry__title">CentOS7에서 Python3.7 설치</h1>
+				<div class="entry__content"><p>CentOS7에서는 기본으로 Python3.7이 없다. yum을 통해 설치하려해도 Python 3.6뿐이다.
+아래는 직접 다운로드 하여 컴파일 설치하는 방법이다.</p>
+<blockquote>
+<p>Root 권한으로 진행합니다.</p>
+</blockquote>
+<h4 id="1-설치전-필요한-패키지-설치">1. 설치전 필요한 패키지 설치</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
+</code></pre></div><h4 id="2-다운로드--설치">2. 다운로드 &amp; 설치</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Download &amp; Decompress</span>
+cd /usr/src
+wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+tar xzf Python-3.7.9.tgz
+
+<span style="color:#75715e"># Create makefile &amp; make</span>
+cd Python-3.7.9
+./configure --enable-optimizations
+make altinstall
+
+<span style="color:#75715e"># remove installation file</span>
+rm /usr/src/Python-3.7.9.tgz
+</code></pre></div><h4 id="3-버전-확인">3. 버전 확인</h4>
+<p>설치된 Python3.7.9의 버전을 확인한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3.7 -v
+
+<span style="color:#f92672">[</span>root@localhost src<span style="color:#f92672">]</span><span style="color:#75715e"># python3.7</span>
+Python 3.7.9 <span style="color:#f92672">(</span>default, Nov <span style="color:#ae81ff">15</span> 2020, 00:09:28<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GCC 4.8.5 <span style="color:#ae81ff">20150623</span> <span style="color:#f92672">(</span>Red Hat 4.8.5-44<span style="color:#f92672">)]</span> on linux
+Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
+&gt;&gt;&gt; exit<span style="color:#f92672">()</span>
+</code></pre></div></div>
+				
+				<footer class="entry__footer">
+					
+					
+<div class="entry__share share">
+	<a class="share__link btn" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fcentos7_python3.7_installation%2f" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Facebook', 'width=800,height=600,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Facebook" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M330 512V322h64l9-74h-73v-47c0-22 6-36 37-36h39V99c-7-1-30-3-57-3-57 0-95 34-95 98v54h-64v74h64v190z"/></svg>
+	</a>
+	<a class="share__link btn" title="Save to Pocket" href="https://getpocket.com/edit?url=%2fpost%2fcentos7_python3.7_installation%2f&amp;title=CentOS7%ec%97%90%ec%84%9c%20Python3.7%20%ec%84%a4%ec%b9%98" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Save to Pocket', 'width=480,height=320,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Pocket" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M388.8 88.9H123.2A47.4 47.4 0 0 0 76 136.5v131.9c0 2.4.2 4.8.5 7.2a101.8 101.8 0 0 0-.5 10.6c0 75.6 80.6 137 180 137s180-61.4 180-137c0-3.6-.2-7.1-.5-10.6.3-2.4.5-4.8.5-7.2v-132A47.4 47.4 0 0 0 388.8 89zm-22.4 132.6l-93 93c-4.7 4.6-11 7-17.1 7a23.8 23.8 0 0 1-17.7-7l-93-93a24 24 0 0 1 33.8-33.8l76.6 76.5 76.6-76.5a24 24 0 0 1 33.8 33.8z"/></svg>
+	</a>
+</div>
+				</footer>
+				
+			</article>
+		</div>
+	</main>
+	
+<div class="authorbox block">
+	<div class="author">
+		<figure class="author__avatar">
+			<img class="author__img" alt="Cybertramp avatar" src="/img/avatar.png" height="90" width="90">
+		</figure>
+		<div class="author__body">
+			<div class="author__name">
+				Cybertramp
+			</div>
+			<div class="author__bio">Frog in the well</div>
+		</div>
+	</div>
+</div>
+	
+
+
+
+	
+<section class="comments block">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-cybertramp-net" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+	</div>
+	<footer class="footer">
+<div class="footer__social social">
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="mailto:paran_son@outlook.com">
+			<svg class="social__icon" aria-label="Email" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M299 268l124 106c-4 4-10 7-17 7H106c-7 0-13-3-17-7l124-106 43 38 43-38zm-43 13L89 138c4-4 10-7 17-7h300c7 0 13 3 17 7L256 281zm54-23l121-105v208L310 258zM81 153l121 105L81 361V153z"/></svg>
+		</a>
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/cybertramp">
+			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+		</a>
+</div>
+	<div class="footer__copyright">© 2020 cybertramp. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 15 Dec 2020 01:26:29 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>json cpp 사용법</title>
-      <link>/post/jsoncpp_%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC/</link>
+      <link>/post/how_to_use_jsoncpp/</link>
       <pubDate>Tue, 15 Dec 2020 01:26:29 +0900</pubDate>
       
-      <guid>/post/jsoncpp_%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC/</guid>
+      <guid>/post/how_to_use_jsoncpp/</guid>
       <description>cpp 코드내에서 json parsing할 일이 생겼다.
 cpp에서 Json을 사용하기 위한 셋업 방법을 설명한다.
   공식 repo에서 git clone

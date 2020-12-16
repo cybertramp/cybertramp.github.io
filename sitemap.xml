@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-12-15T01:26:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/jsoncpp_%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC/</loc>
+    <lastmod>2020-12-15T01:26:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-12-15T01:26:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/change_default_kernel_on_centos7/</loc>
+    <lastmod>2020-12-06T01:26:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -18,17 +38,7 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/linux/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url>
   

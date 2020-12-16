@@ -13,7 +13,7 @@
 <meta property="og:description" content="Responsive card-based &amp; code-light Hugo theme" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-09-09T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-15T01:26:29+09:00" />
 
 		<meta itemprop="name" content="Cybertramp&#39;s Blog">
 <meta itemprop="description" content="Responsive card-based &amp; code-light Hugo theme">
@@ -54,6 +54,34 @@
 	
 	<main class="main">
 			<div class="cards">
+					<div class="card card--2col">
+					<article class="entry card__box block">
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/post/jsoncpp_%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC/">json cpp 사용법</a></h1>
+	<div class="entry__content">cpp 코드내에서 json parsing할 일이 생겼다.
+cpp에서 Json을 사용하기 위한 셋업 방법을 설명한다.
+  공식 repo에서 git clone
+git clone https://github.com/open-source-parsers/jsoncpp.git   디렉토리내 amalgamate.py 실행
+cd jsoncpp python3 amalgamate.py   dist 디렉토리내에 생성된 파일 확인 및 해당 파일들 프로젝트 디렉토리 내에 복사
+cd dist ls -al cd {자신의 프로젝트 디렉토리} cp -rf jsoncpp/dist/json . cp -rf jsoncpp.h .   사용할 cpp 파일에 include
+#include &#34;json/json.h&#34;#include &#34;jsoncpp.h&#34;  컴파일 시 -std=c++11 옵션 필요</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2020-12-15T01:26:29&#43;09:00">2020, December 15</time>
+	</div>
+</article>
+					</div>
+					<div class="card card--2col">
+					<article class="entry card__box block">
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/post/change_default_kernel_on_centos7/">Change default kernel on CentOS7</a></h1>
+	<div class="entry__content">This is how to change the kernel in CentOS7
+  Check kernel version
+uname -r   Kernel install with yum package manager
+yum install yum-plugin-fastermirror - y rpm —import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org # available kernel list yum list available --disablerepo=&#39;*&#39; --enablerepo=elrepo-kernel # stable kernel yum --enablerepo=elrepo-kernel install kernel-lt -y # latest kernel yum --enablerepo=elrepo-kernel install kernel-ml -y   Update grub
+# bootable installed kernel check awk -F\&#39; &#39;$1==&#34;menuentry &#34; {print $2}&#39; /etc/grub2.</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2020-12-06T01:26:29&#43;09:00">2020, December 06</time>
+	</div>
+</article>
+					</div>
 					<div class="card card--2col">
 					<article class="entry card__box block">
 	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/post/centos7_python3.7_installation/">CentOS7에서 Python3.7 설치</a></h1>

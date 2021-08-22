@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Build - nvme-cli #  1. 클론/컴파일/설치 #  git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 #  플러그인은 todd라는 명으로 추가한다.
+mkdir -p plugins/todd   plugins/todd/todd-nvme.h
+#undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme  #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME  #include &#34;cmd.h&#34;#include &lt;stdio.h&gt; PLUGIN(NAME(&#34;todd&#34;, &#34;Todd plugin&#34;), COMMAND_LIST( ENTRY(&#34;list&#34;,&#34;List available FADU devices&#34;,todd_list) ) ); #endif  #include &#34;define_cmd.h&#34;  plugins/todd/todd-nvme.c
+#include &#34;nvme.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Build - nvme-cli" />
+<meta property="og:description" content="Build - nvme-cli #  1. 클론/컴파일/설치 #  git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 #  플러그인은 todd라는 명으로 추가한다.
+mkdir -p plugins/todd   plugins/todd/todd-nvme.h
+#undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme  #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME  #include &#34;cmd.h&#34;#include &lt;stdio.h&gt; PLUGIN(NAME(&#34;todd&#34;, &#34;Todd plugin&#34;), COMMAND_LIST( ENTRY(&#34;list&#34;,&#34;List available FADU devices&#34;,todd_list) ) ); #endif  #include &#34;define_cmd.h&#34;  plugins/todd/todd-nvme.c
+#include &#34;nvme." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/20210822_003/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-22T00:00:00+00:00" />
+
+<title>Build - nvme-cli | Cybertramp&#39;s blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css" integrity="sha256-lYzqeCdiHW&#43;8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.aaf949c8e9613d1836ab34f7e5e81854ba36287571d587cb21faf4f6e2c2d36f.js" integrity="sha256-qvlJyOlhPRg2qzT35egYVLo2KHVx1YfLIfr09uLC028=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Cybertramp&#39;s blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Posts
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Build - nvme-cli</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="build---nvme-cli">
+  Build - nvme-cli
+  <a class="anchor" href="#build---nvme-cli">#</a>
+</h1>
+<h4 id="1-클론컴파일설치">
+  1. 클론/컴파일/설치
+  <a class="anchor" href="#1-%ed%81%b4%eb%a1%a0%ec%bb%b4%ed%8c%8c%ec%9d%bc%ec%84%a4%ec%b9%98">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/linux-nvme/nvme-cli.git
+cd nvme-cli
+make
+make install
+
+<span style="color:#75715e"># RUN</span>
+nvme --version
+</code></pre></div><h4 id="2-커스텀-플러그인-추가">
+  2. 커스텀 플러그인 추가
+  <a class="anchor" href="#2-%ec%bb%a4%ec%8a%a4%ed%85%80-%ed%94%8c%eb%9f%ac%ea%b7%b8%ec%9d%b8-%ec%b6%94%ea%b0%80">#</a>
+</h4>
+<p>플러그인은 todd라는 명으로 추가한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p plugins/todd
+</code></pre></div><ul>
+<li>
+<p><code>plugins/todd/todd-nvme.h</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#undef CMD_INC_FILE
+</span><span style="color:#75715e">#define CMD_INC_FILE plugins/todd/todd-nvme
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ)
+</span><span style="color:#75715e">#define TODD_NVME
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;cmd.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+PLUGIN(NAME(<span style="color:#e6db74">&#34;todd&#34;</span>, <span style="color:#e6db74">&#34;Todd plugin&#34;</span>),
+        COMMAND_LIST(
+                ENTRY(<span style="color:#e6db74">&#34;list&#34;</span>,<span style="color:#e6db74">&#34;List available FADU devices&#34;</span>,todd_list)
+        )
+);
+
+<span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;define_cmd.h&#34;</span><span style="color:#75715e">
+</span></code></pre></div></li>
+<li>
+<p><code>plugins/todd/todd-nvme.c</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#include &#34;nvme.h&#34;</span>
+
+<span style="color:#75715e">#define CREATE_CMD</span>
+<span style="color:#75715e">#include &#34;todd-nvme.h&#34;</span>
+
+static int todd_list<span style="color:#f92672">(</span>int argc, char **argv, struct command *cmd, struct plugin *plugin<span style="color:#f92672">){</span>
+        printf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world!&#34;</span><span style="color:#f92672">)</span>;
+        <span style="color:#66d9ef">return</span> 0;
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li>
+<p><code>Makefile</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 변경전</span>
+PLUGIN_OBJS :<span style="color:#f92672">=</span>                                  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/intel/intel-nvme.o              <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/lnvm/lnvm-nvme.o                <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/memblaze/memblaze-nvme.o        <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/wdc/wdc-nvme.o                  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/wdc/wdc-utils.o                 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/huawei/huawei-nvme.o            <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/netapp/netapp-nvme.o            <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/toshiba/toshiba-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/micron/micron-nvme.o            <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/seagate/seagate-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/virtium/virtium-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/shannon/shannon-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/dera/dera-nvme.o
+
+<span style="color:#75715e"># 변경후</span>
+PLUGIN_OBJS :<span style="color:#f92672">=</span>                                  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/intel/intel-nvme.o              <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/lnvm/lnvm-nvme.o                <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/memblaze/memblaze-nvme.o        <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/wdc/wdc-nvme.o                  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/wdc/wdc-utils.o                 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/huawei/huawei-nvme.o            <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/netapp/netapp-nvme.o            <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/toshiba/toshiba-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/micron/micron-nvme.o            <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/seagate/seagate-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/virtium/virtium-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/shannon/shannon-nvme.o          <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/dera/dera-nvme.o                <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        plugins/todd/todd-nvme.o
+
+</code></pre></div></li>
+<li>
+<p>컴파일/설치/실행</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pwd
+/root/nvme-cli
+
+<span style="color:#75715e"># run on root permission state!</span>
+make clean
+make
+make install
+
+<span style="color:#75715e"># run </span>
+/usr/sbin/nvme
+nvme todd list
+</code></pre></div></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

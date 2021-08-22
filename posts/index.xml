@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Cybertramp&#39;s blog</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on Cybertramp&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build - nvme-cli</title>
+      <link>http://example.org/posts/20210822_003/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/20210822_003/</guid>
+      <description>Build - nvme-cli #  1. 클론/컴파일/설치 #  git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 #  플러그인은 todd라는 명으로 추가한다.
+mkdir -p plugins/todd   plugins/todd/todd-nvme.h
+#undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme  #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME  #include &amp;#34;cmd.h&amp;#34;#include &amp;lt;stdio.h&amp;gt; PLUGIN(NAME(&amp;#34;todd&amp;#34;, &amp;#34;Todd plugin&amp;#34;), COMMAND_LIST( ENTRY(&amp;#34;list&amp;#34;,&amp;#34;List available FADU devices&amp;#34;,todd_list) ) ); #endif  #include &amp;#34;define_cmd.h&amp;#34;  plugins/todd/todd-nvme.c
+#include &amp;#34;nvme.</description>
+    </item>
+    
+    <item>
+      <title>Installation - Django</title>
+      <link>http://example.org/posts/20210822_002/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/20210822_002/</guid>
+      <description>Installation - Django #  1. Installation #  (1) venv 설치 #  개발 환경을 깔끔하게 관리하기 위한 도구
+mkdir v1 cd v1 sudo apt install python3-venv -y python3 -m venv v1 # 개발환경 적용 source v1/bin/activate (2) Django 설치 #  python3 -m pip install --upgrade pip pip install django~=2.0.0 mkdir project1 django-admin startproject mysite . 다음과 같은 구조로 파일이 생성됨
+  생성된 구조
+. ├── manage.py └── mysite ├── __init__.</description>
+    </item>
+    
+    <item>
+      <title>Installation - ElasticSearch</title>
+      <link>http://example.org/posts/20210822_005/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/20210822_005/</guid>
+      <description>install Elasticsearch #   주의   service로 동작하므로 wsl에서 테스트 불가
+  참고   https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-20-04    $ curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - $ echo &amp;#34;deb https://artifacts.elastic.co/packages/7.x/apt stable main&amp;#34; | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list $ sudo apt update $ sudo apt install elasticsearch $ sudo vi /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+# ---------------------------------- Network ----------------------------------- # # Set the bind address to a specific IP (IPv4 or IPv6): # network.</description>
+    </item>
+    
+    <item>
+      <title>Installation - gitea(docker)</title>
+      <link>http://example.org/posts/20210822_004/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/20210822_004/</guid>
+      <description>Installation - getea #  참고
+  https://docs.docker.com/compose/install/  https://docs.gitea.io/en-us/install-with-docker/  apt install docker docker.io -y sudo curl -L &amp;#34;[https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)](https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname%20-s)-$(uname%20-m))&amp;#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose mkdir dockers cd dockers vi docker-compose.yml docker-compose.yml
+version: &amp;#34;2&amp;#34; networks: gitea: external: false services: server: image: gitea/gitea:latest environment: - USER\_UID=1000 - USER\_GID=1000 restart: always networks: - gitea volumes: - ./gitea:/data - /etc/timezone:/etc/timezone:ro - /etc/localtime:/etc/localtime:ro ports: - &amp;#34;3000:3000&amp;#34; - &amp;#34;2222:22&amp;#34; docker-compose up docker-compose start </description>
+    </item>
+    
+    <item>
+      <title>Installation - Mongo DB</title>
+      <link>http://example.org/posts/20210822_001/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/20210822_001/</guid>
+      <description>Mongo DB Installation #   참고
+1. 키 추가 #  wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 #  echo &amp;#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse&amp;#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 #  sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 #  service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 #  MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.</description>
+    </item>
+    
+    <item>
+      <title>Re-Start first post</title>
+      <link>http://example.org/posts/20210805_001/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/20210805_001/</guid>
+      <description>새로운 시작 😲
+블로그를 안했더니&amp;hellip; 마음에 드는 테마가 두둥등장 했었다.</description>
+    </item>
+    
+  </channel>
+</rss>

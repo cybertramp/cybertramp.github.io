@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Installation - Django #  1. Installation #  (1) venv 설치 #  개발 환경을 깔끔하게 관리하기 위한 도구
+mkdir v1 cd v1 sudo apt install python3-venv -y python3 -m venv v1 # 개발환경 적용 source v1/bin/activate (2) Django 설치 #  python3 -m pip install --upgrade pip pip install django~=2.0.0 mkdir project1 django-admin startproject mysite . 다음과 같은 구조로 파일이 생성됨
+  생성된 구조
+. ├── manage.py └── mysite ├── __init__.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Installation - Django" />
+<meta property="og:description" content="Installation - Django #  1. Installation #  (1) venv 설치 #  개발 환경을 깔끔하게 관리하기 위한 도구
+mkdir v1 cd v1 sudo apt install python3-venv -y python3 -m venv v1 # 개발환경 적용 source v1/bin/activate (2) Django 설치 #  python3 -m pip install --upgrade pip pip install django~=2.0.0 mkdir project1 django-admin startproject mysite . 다음과 같은 구조로 파일이 생성됨
+  생성된 구조
+. ├── manage.py └── mysite ├── __init__." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/20210822_002/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-22T00:00:00+00:00" />
+
+<title>Installation - Django | Cybertramp&#39;s blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css" integrity="sha256-lYzqeCdiHW&#43;8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.aaf949c8e9613d1836ab34f7e5e81854ba36287571d587cb21faf4f6e2c2d36f.js" integrity="sha256-qvlJyOlhPRg2qzT35egYVLo2KHVx1YfLIfr09uLC028=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Cybertramp&#39;s blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Posts
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Installation - Django</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-installation">1. Installation</a></li>
+        <li><a href="#2-app-만들기">2. App 만들기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="installation---django">
+  Installation - Django
+  <a class="anchor" href="#installation---django">#</a>
+</h1>
+<h3 id="1-installation">
+  1. Installation
+  <a class="anchor" href="#1-installation">#</a>
+</h3>
+<h4 id="1-venv-설치">
+  (1) venv 설치
+  <a class="anchor" href="#1-venv-%ec%84%a4%ec%b9%98">#</a>
+</h4>
+<p>개발 환경을 깔끔하게 관리하기 위한 도구</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir v1
+cd v1
+
+sudo apt install python3-venv -y
+python3 -m venv v1
+
+<span style="color:#75715e"># 개발환경 적용</span>
+source v1/bin/activate
+</code></pre></div><h4 id="2-django-설치">
+  (2) Django 설치
+  <a class="anchor" href="#2-django-%ec%84%a4%ec%b9%98">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3 -m pip install --upgrade pip
+pip install django~<span style="color:#f92672">=</span>2.0.0
+
+mkdir project1
+django-admin startproject mysite .
+</code></pre></div><p>다음과 같은 구조로 파일이 생성됨</p>
+<ul>
+<li>
+<p>생성된 구조</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── manage.py
+└── mysite
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-36.pyc
+    │   └── settings.cpython-36.pyc
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+
+<span style="color:#ae81ff">2</span> directories, <span style="color:#ae81ff">7</span> files
+</code></pre></div></li>
+</ul>
+<h4 id="3-설정-변경">
+  (3) 설정 변경
+  <a class="anchor" href="#3-%ec%84%a4%ec%a0%95-%eb%b3%80%ea%b2%bd">#</a>
+</h4>
+<ul>
+<li>
+<p>타임존/정적파일 위치 변경</p>
+<p>기존 것을 변경하되 없으면 추가</p>
+<p><code>mysite/settings.py</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TIME_ZONE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Asia/Seoul&#39;</span>
+
+STATIC_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/static/&#39;</span>
+STATIC_ROOT <span style="color:#f92672">=</span> os.path.join<span style="color:#f92672">(</span>BASE_DIR, <span style="color:#e6db74">&#39;static&#39;</span><span style="color:#f92672">)</span>
+</code></pre></div></li>
+</ul>
+<h4 id="4-db-설정">
+  (4) DB 설정
+  <a class="anchor" href="#4-db-%ec%84%a4%ec%a0%95">#</a>
+</h4>
+<p>Django는 기본적으로 sqlite3가 적용되어 있음</p>
+<p><code>mysite/settings.py</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">DATABASES <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#39;default&#39;</span>: <span style="color:#f92672">{</span>
+        <span style="color:#e6db74">&#39;ENGINE&#39;</span>: <span style="color:#e6db74">&#39;django.db.backends.sqlite3&#39;</span>,
+        <span style="color:#e6db74">&#39;NAME&#39;</span>: os.path.join<span style="color:#f92672">(</span>BASE_DIR, <span style="color:#e6db74">&#39;db.sqlite3&#39;</span><span style="color:#f92672">)</span>,
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>SITE에 DB를 생성하기 위해서는 커맨드를 실행해야함</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py migrate
+</code></pre></div><h4 id="5-서버-실행">
+  (5) 서버 실행
+  <a class="anchor" href="#5-%ec%84%9c%eb%b2%84-%ec%8b%a4%ed%96%89">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py runserver
+</code></pre></div><p>
+  <img src="/img/image-20200504165655390.png" alt="image-20200504165655390" /></p>
+<p>
+  <img src="/img/image-20200504182023942.png" alt="image-20200504182023942" /></p>
+<h3 id="2-app-만들기">
+  2. App 만들기
+  <a class="anchor" href="#2-app-%eb%a7%8c%eb%93%a4%ea%b8%b0">#</a>
+</h3>
+<h4 id="1-생성">
+  (1) 생성
+  <a class="anchor" href="#1-%ec%83%9d%ec%84%b1">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py startapp blog
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-installation">1. Installation</a></li>
+        <li><a href="#2-app-만들기">2. App 만들기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

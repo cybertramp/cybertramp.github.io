@@ -1,63 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/</loc>
-    <lastmod>2020-12-15T01:26:29+09:00</lastmod>
+    <loc>http://example.org/posts/20210822_003/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/installation/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/20210822_002/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/20210822_005/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/20210822_004/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/20210822_001/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/daily/</loc>
+    <lastmod>2021-08-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/20210805_001/</loc>
+    <lastmod>2021-08-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/docs/profile/</loc>
+  </url><url>
+    <loc>http://example.org/docs/projects/</loc>
+  </url><url>
+    <loc>http://example.org/docs/</loc>
+  </url><url>
+    <loc>http://example.org/tags/</loc>
   </url>
-  
-  <url>
-    <loc>/post/how_to_use_jsoncpp/</loc>
-    <lastmod>2020-12-15T01:26:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-12-15T01:26:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/change_default_kernel_on_centos7/</loc>
-    <lastmod>2020-12-06T01:26:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/centos7_python3.7_installation/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/linux/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/page/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/page/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/page/search/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-  </url>
-  
 </urlset>

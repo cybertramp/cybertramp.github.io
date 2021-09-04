@@ -73,23 +73,5 @@ version: &amp;#34;2&amp;#34; networks: gitea: external: false services: server: 
 블로그를 안했더니&amp;hellip; 마음에 드는 테마가 두둥등장 했었다.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>http://example.org/docs/profile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/profile/</guid>
-      <description>profile page</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://example.org/docs/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/projects/</guid>
-      <description>projects page</description>
-    </item>
-    
   </channel>
 </rss>

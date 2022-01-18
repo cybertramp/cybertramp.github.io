@@ -2,45 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/posts/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/python3/pyqt5/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/20210822_003/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/python3/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/c_cpp/</loc>
   </url><url>
-    <loc>http://example.org/categories/installation/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/linux/installation/</loc>
   </url><url>
-    <loc>http://example.org/posts/20210822_002/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/interesting_things/</loc>
   </url><url>
-    <loc>http://example.org/posts/20210822_005/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/python3/pyqt5/test/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/20210822_004/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/python3/pyqt5/210116_001/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/20210822_001/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/linux/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
-    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/</loc>
+    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/daily/</loc>
-    <lastmod>2021-08-04T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/</loc>
+    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url><url>
-    <loc>http://example.org/posts/20210805_001/</loc>
-    <lastmod>2021-08-04T00:00:00+00:00</lastmod>
+    <loc>https://cybertramp.net/computer_language/golang/</loc>
+    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/menu/</loc>
+    <loc>https://cybertramp.net/computer_language/golang/220119_001/</loc>
+    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/profile/</loc>
+    <loc>https://cybertramp.net/computer_language/golang/211107_001/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/links/</loc>
+    <loc>https://cybertramp.net/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://cybertramp.net/tags/</loc>
   </url>
 </urlset>

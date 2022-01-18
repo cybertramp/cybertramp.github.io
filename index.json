@@ -1,0 +1,106 @@
+[
+{
+	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/",
+	"title": "PyQT5",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/computer_language/python3/",
+	"title": "Python3",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/computer_language/c_cpp/",
+	"title": "C/C++",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/linux/installation/",
+	"title": "Installation",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/interesting_things/",
+	"title": "Interesting things",
+	"tags": null,
+	"description": "",
+	"content": "test1\n"
+},
+{
+	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/test/",
+	"title": "test",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/210116_001/",
+	"title": "빌드가 안될때 해결법",
+	"tags": null,
+	"description": "",
+	"content": "PyQT5 빌드가 안될때 해결하는 방법이다. 빌드시 상대 경로가 문제인 경우에서의 해결 방법.\n3699 WARNING: lib not found: api-ms-win-core-libraryloader-l1-2-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3704 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3706 WARNING: lib not found: api-ms-win-core-util-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3708 WARNING: lib not found: api-ms-win-core-errorhandling-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3712 WARNING: lib not found: api-ms-win-core-sysinfo-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3715 WARNING: lib not found: api-ms-win-core-interlocked-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3718 WARNING: lib not found: api-ms-win-core-winrt-string-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3720 WARNING: lib not found: api-ms-win-core-winrt-error-l1-1-1.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3723 WARNING: lib not found: api-ms-win-core-profile-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3725 WARNING: lib not found: api-ms-win-core-rtlsupport-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3732 WARNING: lib not found: api-ms-win-core-com-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3734 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-1.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3736 WARNING: lib not found: api-ms-win-core-synch-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3738 WARNING: lib not found: api-ms-win-core-winrt-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3740 WARNING: lib not found: api-ms-win-core-winrt-error-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3742 WARNING: lib not found: api-ms-win-core-debug-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3771 WARNING: lib not found: api-ms-win-core-path-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python39.dll 위와 같은 Warning 메시지가 뜨고 실행 파일이 실행되지 않는다면 다음과 같이 조치하면 된다.\n  Windows 설정에서 앱 실행 별칭에서 Python 관련된 것을 모두 해제하고 하나 하나 올려보며 확인한다.\n  그래도 안되면 PyQT5를 그냥 재설치 해주면된다.\npip install pyqt5\n  아래의 글들이 도움되었다.\n 윈도우10 에서 파이썬 사용시 경로가 꼬이는 경우 — 내 저장소 (tistory.com) pyinstaller 사용 시 WARNING lib not found api-ms-win 과 같은 에러가 발생하는 경우 · Tonic (jwgo.kr)  "
+},
+{
+	"uri": "https://cybertramp.net/linux/",
+	"title": "Linux",
+	"tags": null,
+	"description": "",
+	"content": "test1\n"
+},
+{
+	"uri": "https://cybertramp.net/computer_language/",
+	"title": "Computer Language",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/",
+	"title": "",
+	"tags": null,
+	"description": "",
+	"content": "Hi! This site is cybertramp\u0026#39;s private space. 😁 I like anything computer-related. If you would like to visit the blog you used before, please refer to the address below. cybertramp.tistory.com Thanks! "
+},
+{
+	"uri": "https://cybertramp.net/computer_language/golang/",
+	"title": "Go",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/computer_language/golang/220119_001/",
+	"title": "GoLang 설치",
+	"tags": null,
+	"description": "",
+	"content": "Version: 1.17.6을 설치하는 방법이다.\n  다운 및 설치\n# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go \u0026amp;\u0026amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version    프로젝트 생성 \u0026amp; 셋업\ncd {project dict} go mod init {package name} go mod tidy go build    Compile\nGOOS=linux GOARCH=amd64 go build -v xxxx.go GOOS=windows GOARCH=amd64 go build -v xxxx.go    "
+},
+{
+	"uri": "https://cybertramp.net/computer_language/golang/211107_001/",
+	"title": "해결하기 - too many open files; retrying in 1s",
+	"tags": null,
+	"description": "",
+	"content": "Go로 http 라이브러리를 사용하여 API 서버를 만들었으나, 테스트로 1일 동안 여러 장비에서 API를 주고 받았는데, 문제가 생겨있었다.\n2021/10/30 04:26:49 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:50 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:51 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:52 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:53 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:54 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:55 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:56 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 파일을 너무 많이 열어서 문제가 생긴건데, 원인이 뭔지 몰랐다. 아마 각 장비에서 날아오는 요청이 닫히지 않고 계속 열려서 문제가 생긴듯 했다.\n리눅스에 열수 있는 파일 개수 제한은 분명 무제한이 되어 있으나, 아마 메모리나 용량을 넘어서 발생한게 아닐까 생각이 들었다.\n[opc@dq-mon dq_mon]$ free total used free shared buff/cache available Mem: 823260 182832 252828 10848 387600 623816 Swap: 8388604 0 8388604 [opc@dq-mon dq_mon]$ df -h Filesystem Size Used Avail Use% Mounted on devtmpfs 357M 0 357M 0% /dev tmpfs 402M 0 402M 0% /dev/shm tmpfs 402M 11M 392M 3% /run tmpfs 402M 0 402M 0% /sys/fs/cgroup /dev/mapper/centosvolume-root 40G 11G 29G 28% / /dev/sda2 1014M 557M 458M 55% /boot /dev/sda1 100M 7.3M 93M 8% /boot/efi tmpfs 81M 0 81M 0% /run/user/987 tmpfs 81M 0 81M 0% /run/user/1000 [opc@dq-mon dq_mon]$ ulimit unlimited 이 문제는 확인해보니 클라이언트 측에서 Close를 해주지 않아 발생한 문제이다. Client 측에 다음과 같이 적용하였더니 lsof | wc -l에서 값이 증가하지 않는 것을 확인하였다.\nresp, _ := http.Post(url, \u0026#34;application/json\u0026#34;, buff) resp.Body.Close() http에서는 3 Way Hand shaking을 하고 서로 연결을 하는데, HTTP/1.1 부터 Keep Alive라는 기능을 통해 Hand shaking을 건너띄는 것이 있다. 이로 인해 발생하는 것으로 보인다.\n사용중 다시 문제가 있었다. 서버가 꺼져있는 경우 Service가 정상적으로 동작하지 않으며, Fail로 꺼져버리는 문제가 확인됬다.\nGolang - http.Client에는 Timeout이 들어가야 한다. (tistory.com)\nGolang의 Http 패키지 잘 사용하기. 최근에 서비스에 http 호출 클라이언트를 개발하며 net/http… | by Daniel | 센트비 기술 블로그 | Medium\nHTTP request timeouts in Go for beginners | by Aditya pratap singh | ITNEXT\n여러 링크들을 참조했지만 딱히 별 효과는 없었다.\n2주나 삽질을 했지만 찾지 못했다가 드디어 방법을 찾았다.\n참조: go http requests in loop - Stack Overflow\n세가지가 문제였던것 같다.\n 내가 log.Fatal() 함수를 사용한 점  이 함수는 에러 로그를 출력하고 프로그램을 완전히 종료한다\u0026hellip; 그래서 계속 꺼졌던 것이다.\n  defer res.Body.Close를 사용하여 서비스가 꺼지게 한 점  defer는 보통 함수가 끝나면 동작하는 것으로 알고 있다. 여기서 말하기를 body는 읽을때 마다 닫아야하기 때문에 잘못 되었다고 한다.\n  go routin으로 사용안한 점  이건 책을 좀 찾아봐야했다.\n  goroutine  Go에서 동시에 실행할 수 있는 Go 만의 최소 실행단위를 말한다. 호출할 함수 앞에 go 키워드를 붙이면, 그 함수는 즉시 return 하고 실제 동작은 background에서 Go 루틴 형태로 실행하면서 원래 수행하던 프로그램 흐름은 계속 진행된다. Go 자체의 스케쥴러에 의해 제어 된다. 따라서 실행 순서는 예측할 수 없다. 실행 사이즈: 프로세스 \u0026gt; Go 루틴 \u0026gt; 쓰레드      자세한 사항은 내가 좀 더 공부를 해야겠지만 잘 해결되었다.\n "
+},
+{
+	"uri": "https://cybertramp.net/categories/",
+	"title": "Categories",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/tags/",
+	"title": "Tags",
+	"tags": null,
+	"description": "",
+	"content": ""
+}]

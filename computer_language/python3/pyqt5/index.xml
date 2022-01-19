@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PyQT5 on Cybertramp Blog</title>
+    <title>/pyqt5 on Cybertramp Blog</title>
     <link>https://cybertramp.net/computer_language/python3/pyqt5/</link>
-    <description>Recent content in PyQT5 on Cybertramp Blog</description>
+    <description>Recent content in /pyqt5 on Cybertramp Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/computer_language/python3/pyqt5/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-kr</language><atom:link href="https://cybertramp.net/computer_language/python3/pyqt5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>빌드가 안될때 해결법</title>
       <link>https://cybertramp.net/computer_language/python3/pyqt5/210116_001/</link>

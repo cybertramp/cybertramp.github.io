@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="alternate" type="application/rss+xml" href="https://cybertramp.net/categories/index.xml" title="Cybertramp Blog" />
-    <link rel="canonical" href="https://cybertramp.net/categories/">
+    <link rel="canonical" href="https://cybertramp.net/linux/installation/20210822_004/">
 
     <title>
         
-        Categories | Cybertramp Blog
+        Installation - gitea(docker) | Cybertramp Blog
         
     </title>
 
@@ -93,12 +92,12 @@
         
         <a class="nav-link p-0" href="/interesting_things/"><h6>/interest_things</h6></a>
     </li>
-    <li data-nav-id="/linux/" class="nav-item my-1 haschildren
+    <li data-nav-id="/linux/" class="nav-item my-1 parent haschildren
         ">
         
         <a class="nav-link p-0" href="/linux/"><h6>/linux</h6></a>
         <ul class="list-unstyled ml-2">
-    <li data-nav-id="/linux/installation/" class="nav-item my-1 haschildren
+    <li data-nav-id="/linux/installation/" class="nav-item my-1 parent haschildren
         ">
         
         <a class="nav-link p-0" href="/linux/installation/"><h6>/installation</h6></a>
@@ -109,7 +108,7 @@
                     Installation - ElasticSearch
                 </a>
         </li>
-        <li data-nav-id="/linux/installation/20210822_004/" class="nav-item my-1">
+        <li data-nav-id="/linux/installation/20210822_004/" class="nav-item my-1 active">
                 
                  <a href="/linux/installation/20210822_004/" class="nav-link p-0">
                     Installation - gitea(docker)
@@ -202,24 +201,58 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	
+	<nav id="TableOfContents"></nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
-<main>
-    <article>
-        <header>
-            <h1>Categories</h1>
-        </header>
-        
-        
-    </article>
-    <ul>
+
+<h1>Installation - gitea(docker)</h1>
+<p><u>글을 쓴날: 2021-08-22</u></p>
+<p>참고</p>
+<ul>
+<li><a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></li>
+<li><a href="https://docs.gitea.io/en-us/install-with-docker/">https://docs.gitea.io/en-us/install-with-docker/</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install docker docker.io -y
+
+sudo curl -L <span style="color:#4070a0">&#34;[https://github.com/docker/compose/releases/download/1.26.0/docker-compose-</span><span style="color:#007020;font-weight:bold">$(</span>uname -s<span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">-</span><span style="color:#007020;font-weight:bold">$(</span>uname -m<span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">](https://github.com/docker/compose/releases/download/1.26.0/docker-compose-</span><span style="color:#007020;font-weight:bold">$(</span>uname%20-s<span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">-</span><span style="color:#007020;font-weight:bold">$(</span>uname%20-m<span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">)&#34;</span> -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir dockers
+<span style="color:#007020">cd</span> dockers
+vi docker-compose.yml
+</code></pre></div><p><code>docker-compose.yml</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#062873;font-weight:bold">version</span>:<span style="color:#bbb"> </span><span style="color:#4070a0">&#34;2&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#062873;font-weight:bold">networks</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">gitea</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">external</span>:<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#062873;font-weight:bold">services</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">server</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">image</span>:<span style="color:#bbb"> </span>gitea/gitea:latest<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">environment</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- USER\_UID=1000<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- USER\_GID=1000<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">restart</span>:<span style="color:#bbb"> </span>always<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">networks</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- gitea<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">volumes</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- ./gitea:/data<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- /etc/timezone:/etc/timezone:ro<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- /etc/localtime:/etc/localtime:ro<span style="color:#bbb">
+</span><span style="color:#bbb"> </span><span style="color:#062873;font-weight:bold">ports</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- <span style="color:#4070a0">&#34;3000:3000&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- <span style="color:#4070a0">&#34;2222:22&#34;</span><span style="color:#bbb">
+</span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose up
+docker-compose start
+</code></pre></div>
+
     
-    
-    </ul>
-</main>
+
 
                     
                     <div class="row"><div class="position-relative mx-auto col-lg-9">

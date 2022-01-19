@@ -1,10 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Installation on Cybertramp Blog</title>
+    <title>/installation on Cybertramp Blog</title>
     <link>https://cybertramp.net/linux/installation/</link>
-    <description>Recent content in Installation on Cybertramp Blog</description>
+    <description>Recent content in /installation on Cybertramp Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language><atom:link href="https://cybertramp.net/linux/installation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation - ElasticSearch</title>
+      <link>https://cybertramp.net/linux/installation/20210822_005/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20210822_005/</guid>
+      <description>주의   service로 동작하므로 wsl에서 테스트 불가
+  참고  https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-20-04    $ curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - $ echo &amp;#34;deb https://artifacts.elastic.co/packages/7.x/apt stable main&amp;#34; | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list $ sudo apt update $ sudo apt install elasticsearch $ sudo vi /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+# ---------------------------------- Network -----------------------------------## Set the bind address to a specific IP (IPv4 or IPv6):#network.host:localhost$ sudo systemctl start elasticsearch $ sudo systemctl enable elasticsearch   Request Test</description>
+    </item>
+    
+    <item>
+      <title>Installation - gitea(docker)</title>
+      <link>https://cybertramp.net/linux/installation/20210822_004/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20210822_004/</guid>
+      <description>참고
+ https://docs.docker.com/compose/install/ https://docs.gitea.io/en-us/install-with-docker/  apt install docker docker.io -y sudo curl -L &amp;#34;[https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)](https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname%20-s)-$(uname%20-m))&amp;#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose mkdir dockers cd dockers vi docker-compose.yml docker-compose.yml
+version:&amp;#34;2&amp;#34;networks:gitea:external:falseservices:server:image:gitea/gitea:latestenvironment:- USER\_UID=1000- USER\_GID=1000restart:alwaysnetworks:- giteavolumes:- ./gitea:/data- /etc/timezone:/etc/timezone:ro- /etc/localtime:/etc/localtime:roports:- &amp;#34;3000:3000&amp;#34;- &amp;#34;2222:22&amp;#34;docker-compose up docker-compose start </description>
+    </item>
+    
+    <item>
+      <title>Installation - Mongo DB</title>
+      <link>https://cybertramp.net/linux/installation/20210822_001/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20210822_001/</guid>
+      <description>참고
+1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo &amp;#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse&amp;#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.
+mongo
+use admin db.createUser( { user: &amp;#34;원하는 계정 이름&amp;#34;, pwd: &amp;#34;패스워드&amp;#34;, roles: [&amp;#39;root&amp;#39;] } ) 6.</description>
+    </item>
+    
+    <item>
+      <title>Dlib 설치 &amp; 연동</title>
+      <link>https://cybertramp.net/linux/installation/20191028_001/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20191028_001/</guid>
+      <description>[1] Dlib 설치 사전 상태  opencv4 버전, Visual Studio community 2019가 설치되어 있음
+ 1. dlib 다운 공식페이지에서 다운로드 받고 압축풀기
+2. Cmake 다운 &amp;amp; 실행 공식페이지에서 Bianry로 다운로드
+cmake-3.16.0-win64-x64\bin에서 cmake-gui.exe실행
+ 내가 다운로드 받은 것은 x64용이다.
+   소스코드 경로 잡아주기
+  바이너리 빌드 위치 잡아주기
+  Configure 클릭
+  VIsual Studio 버전과 x64선택
+  먼저 에러가 빨갛게 에러가 나겠지만 OpenCV 경로 지정이 잘못되서 그럴것이다.</description>
+    </item>
+    
+    <item>
+      <title>PowerPC64 환경에서 CentOS7</title>
+      <link>https://cybertramp.net/linux/installation/20191027_001/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20191027_001/</guid>
+      <description>Ubuntu 환경 위에서 qemu-system-ppc를 통해 CentOS 7을 실행한다.
+ 하루를 삽질했다&amp;hellip;ㅠ
+ 1. 설치 1) CentOS7 minimal 다운로드 ppc 아키텍쳐 버전의 CentOS7은 다음 사이트에서 다운 받는다.
+http://isoredirect.centos.org/altarch/7/isos/ppc64/
+원하는 미러 사이트에서 CentOS-7-ppc64-Minimal-1908.iso을 내려 받으면된다.
+ 나는 http://mirror.xtom.com.hk/centos-altarch/7.7.1908/isos/ppc64/ 이 미러에서 받았다. 가장 빨랐다.
+ 2) qemu 설치   qemu 설치
+sudo apt install qemu-kvm qemu virt-manager virt-viewer libvirt-bin -y   ppc용 설치
+sudo apt install qemu-system-ppc openbios-ppc -y   3) 브릿지 설정   설치</description>
+    </item>
+    
   </channel>
 </rss>

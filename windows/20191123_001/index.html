@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="alternate" type="application/rss+xml" href="https://cybertramp.net/categories/index.xml" title="Cybertramp Blog" />
-    <link rel="canonical" href="https://cybertramp.net/categories/">
+    <link rel="canonical" href="https://cybertramp.net/windows/20191123_001/">
 
     <title>
         
-        Categories | Cybertramp Blog
+        Windows Terminal에서 시작 디렉토리 지정하기 | Cybertramp Blog
         
     </title>
 
@@ -75,12 +74,12 @@
      <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
         
          <ul class="navbar-nav flex-column">
-    <li data-nav-id="/windows/" class="nav-item my-1 haschildren
+    <li data-nav-id="/windows/" class="nav-item my-1 parent haschildren
         ">
         
         <a class="nav-link p-0" href="/windows/"><h6>/windows</h6></a>
         <ul class="list-unstyled ml-2">
-        <li data-nav-id="/windows/20191123_001/" class="nav-item my-1">
+        <li data-nav-id="/windows/20191123_001/" class="nav-item my-1 active">
                 
                  <a href="/windows/20191123_001/" class="nav-link p-0">
                     Windows Terminal에서 시작 디렉토리 지정하기
@@ -202,24 +201,64 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	
+	<nav id="TableOfContents"></nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
-<main>
-    <article>
-        <header>
-            <h1>Categories</h1>
-        </header>
-        
-        
-    </article>
-    <ul>
+
+<h1>Windows Terminal에서 시작 디렉토리 지정하기</h1>
+<p><u>글을 쓴날: 2019-11-23</u></p>
+<p>Windows Terminal을 설치하고 실행하면 경로가 윈도우의 홈 디렉토리로 시작하게 된다. 작업하는데 매번 해당 경로를 타고 다시 이동해야하는 번거로움을 줄이기 위해 설정한다.</p>
+<ul>
+<li>
+<p>기존 예제</p>
+<p>기존에는 <code>&quot;startingDirectory&quot;</code> 속성이 없어서 터미널 실행시 아래와 같은 위치로 시작한다.</p>
+<p>[설정된 속성]</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#666">{</span>
+    <span style="color:#4070a0">&#34;guid&#34;</span>: <span style="color:#4070a0">&#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}&#34;</span>,
+    <span style="color:#4070a0">&#34;hidden&#34;</span>: false,
+    <span style="color:#4070a0">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;Ubuntu-18.04&#34;</span>,
+    <span style="color:#4070a0">&#34;source&#34;</span>: <span style="color:#4070a0">&#34;Windows.Terminal.Wsl&#34;</span>
+<span style="color:#666">}</span>,
+</code></pre></div><p>[터미널 시작시]</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">paran_son@pandorica:/mnt/c/Users/paran_son$
+</code></pre></div></li>
+<li>
+<p>위치를 WSL 내 사용자 홈 디렉토리로 변경</p>
+<blockquote>
+<p>여기서 home 디렉토리 아래 사용자명은 WSL 내 사용자 명으로 설정해주어야 한다.</p>
+</blockquote>
+<p>&lt;수정된 속성&gt;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#666">{</span>
+    <span style="color:#4070a0">&#34;guid&#34;</span>: <span style="color:#4070a0">&#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}&#34;</span>,
+    <span style="color:#4070a0">&#34;hidden&#34;</span>: false,
+    <span style="color:#4070a0">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;Ubuntu-18.04&#34;</span>,
+    <span style="color:#4070a0">&#34;source&#34;</span>: <span style="color:#4070a0">&#34;Windows.Terminal.Wsl&#34;</span>,
+    <span style="color:#4070a0">&#34;startingDirectory&#34;</span>: <span style="color:#4070a0">&#34;\\\\wsl</span>$<span style="color:#4070a0">\\Ubuntu-18.04\\home\\paran_son&#34;</span>
+<span style="color:#666">}</span>,
+</code></pre></div><p>&lt;터미널 시작시&gt;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">greendot@pandorica:~$
+</code></pre></div></li>
+<li>
+<p>위치를 c 드라이브 내 특정 디렉토리로 변경</p>
+<p>여기서는 c드라이브 내 <code>working</code> 디렉토리를 시작 위치로 지정한다.</p>
+<p>&lt;수정된 속성&gt;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#666">{</span>
+	<span style="color:#4070a0">&#34;guid&#34;</span>: <span style="color:#4070a0">&#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}&#34;</span>,
+    <span style="color:#4070a0">&#34;hidden&#34;</span>: false,
+    <span style="color:#4070a0">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;Ubuntu-18.04&#34;</span>,
+    <span style="color:#4070a0">&#34;source&#34;</span>: <span style="color:#4070a0">&#34;Windows.Terminal.Wsl&#34;</span>,
+	<span style="color:#4070a0">&#34;startingDirectory&#34;</span>: <span style="color:#4070a0">&#34;../../working&#34;</span>
+<span style="color:#666">}</span>,
+</code></pre></div><p>&lt;터미널 시작시&gt;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">greendot@pandorica:/mnt/c/working$
+</code></pre></div></li>
+</ul>
+
+
     
-    
-    </ul>
-</main>
+
 
                     
                     <div class="row"><div class="position-relative mx-auto col-lg-9">

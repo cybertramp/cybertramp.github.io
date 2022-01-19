@@ -1,38 +1,45 @@
 [
 {
-	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/",
-	"title": "PyQT5",
-	"tags": null,
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://cybertramp.net/computer_language/python3/",
-	"title": "Python3",
+	"uri": "https://cybertramp.net/windows/",
+	"title": "/windows",
 	"tags": null,
 	"description": "",
 	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/computer_language/c_cpp/",
-	"title": "C/C++",
+	"title": "/c_cpp",
 	"tags": null,
 	"description": "",
 	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/linux/installation/",
-	"title": "Installation",
+	"title": "/installation",
 	"tags": null,
 	"description": "",
 	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/interesting_things/",
-	"title": "Interesting things",
+	"title": "/interest_things",
 	"tags": null,
 	"description": "",
 	"content": "test1\n"
+},
+{
+	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/",
+	"title": "/pyqt5",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/computer_language/python3/",
+	"title": "/python3",
+	"tags": null,
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/210116_001/",
@@ -43,14 +50,14 @@
 },
 {
 	"uri": "https://cybertramp.net/linux/",
-	"title": "Linux",
+	"title": "/linux",
 	"tags": null,
 	"description": "",
 	"content": "test1\n"
 },
 {
 	"uri": "https://cybertramp.net/computer_language/",
-	"title": "Computer Language",
+	"title": "/computer_langs",
 	"tags": null,
 	"description": "",
 	"content": ""
@@ -60,14 +67,7 @@
 	"title": "",
 	"tags": null,
 	"description": "",
-	"content": "Hi! This site is cybertramp\u0026#39;s private space. 😁 I like anything computer-related. If you would like to visit the blog you used before, please refer to the address below. cybertramp.tistory.com Thanks! "
-},
-{
-	"uri": "https://cybertramp.net/computer_language/golang/",
-	"title": "Go",
-	"tags": null,
-	"description": "",
-	"content": ""
+	"content": "Hi! This site is cybertramp\u0026#39;s private space. 😁 I like anything computer-related. If you would like to visit the blog you used before, please refer to the address below. cybertramp.tistory.com Thanks! 퇴근하고 짬짬이 업데이트 하고있어요 🦾\n이젠 미루지 않고 모두 모으고 정리하려 합니다.\n아래는 앞으로 추가할 기능이네요.\n 블로그 시작 땅 디자인 최적화 글의 이미지 연동 글 업데이트 Disqus 기능 추가   "
 },
 {
 	"uri": "https://cybertramp.net/computer_language/golang/220119_001/",
@@ -82,6 +82,62 @@
 	"tags": null,
 	"description": "",
 	"content": "Go로 http 라이브러리를 사용하여 API 서버를 만들었으나, 테스트로 1일 동안 여러 장비에서 API를 주고 받았는데, 문제가 생겨있었다.\n2021/10/30 04:26:49 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:50 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:51 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:52 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:53 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:54 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:55 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:56 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 파일을 너무 많이 열어서 문제가 생긴건데, 원인이 뭔지 몰랐다. 아마 각 장비에서 날아오는 요청이 닫히지 않고 계속 열려서 문제가 생긴듯 했다.\n리눅스에 열수 있는 파일 개수 제한은 분명 무제한이 되어 있으나, 아마 메모리나 용량을 넘어서 발생한게 아닐까 생각이 들었다.\n[opc@dq-mon dq_mon]$ free total used free shared buff/cache available Mem: 823260 182832 252828 10848 387600 623816 Swap: 8388604 0 8388604 [opc@dq-mon dq_mon]$ df -h Filesystem Size Used Avail Use% Mounted on devtmpfs 357M 0 357M 0% /dev tmpfs 402M 0 402M 0% /dev/shm tmpfs 402M 11M 392M 3% /run tmpfs 402M 0 402M 0% /sys/fs/cgroup /dev/mapper/centosvolume-root 40G 11G 29G 28% / /dev/sda2 1014M 557M 458M 55% /boot /dev/sda1 100M 7.3M 93M 8% /boot/efi tmpfs 81M 0 81M 0% /run/user/987 tmpfs 81M 0 81M 0% /run/user/1000 [opc@dq-mon dq_mon]$ ulimit unlimited 이 문제는 확인해보니 클라이언트 측에서 Close를 해주지 않아 발생한 문제이다. Client 측에 다음과 같이 적용하였더니 lsof | wc -l에서 값이 증가하지 않는 것을 확인하였다.\nresp, _ := http.Post(url, \u0026#34;application/json\u0026#34;, buff) resp.Body.Close() http에서는 3 Way Hand shaking을 하고 서로 연결을 하는데, HTTP/1.1 부터 Keep Alive라는 기능을 통해 Hand shaking을 건너띄는 것이 있다. 이로 인해 발생하는 것으로 보인다.\n사용중 다시 문제가 있었다. 서버가 꺼져있는 경우 Service가 정상적으로 동작하지 않으며, Fail로 꺼져버리는 문제가 확인됬다.\nGolang - http.Client에는 Timeout이 들어가야 한다. (tistory.com)\nGolang의 Http 패키지 잘 사용하기. 최근에 서비스에 http 호출 클라이언트를 개발하며 net/http… | by Daniel | 센트비 기술 블로그 | Medium\nHTTP request timeouts in Go for beginners | by Aditya pratap singh | ITNEXT\n여러 링크들을 참조했지만 딱히 별 효과는 없었다.\n2주나 삽질을 했지만 찾지 못했다가 드디어 방법을 찾았다.\n참조: go http requests in loop - Stack Overflow\n세가지가 문제였던것 같다.\n 내가 log.Fatal() 함수를 사용한 점  이 함수는 에러 로그를 출력하고 프로그램을 완전히 종료한다\u0026hellip; 그래서 계속 꺼졌던 것이다.\n  defer res.Body.Close를 사용하여 서비스가 꺼지게 한 점  defer는 보통 함수가 끝나면 동작하는 것으로 알고 있다. 여기서 말하기를 body는 읽을때 마다 닫아야하기 때문에 잘못 되었다고 한다.\n  go routin으로 사용안한 점  이건 책을 좀 찾아봐야했다.\n  goroutine  Go에서 동시에 실행할 수 있는 Go 만의 최소 실행단위를 말한다. 호출할 함수 앞에 go 키워드를 붙이면, 그 함수는 즉시 return 하고 실제 동작은 background에서 Go 루틴 형태로 실행하면서 원래 수행하던 프로그램 흐름은 계속 진행된다. Go 자체의 스케쥴러에 의해 제어 된다. 따라서 실행 순서는 예측할 수 없다. 실행 사이즈: 프로세스 \u0026gt; Go 루틴 \u0026gt; 쓰레드      자세한 사항은 내가 좀 더 공부를 해야겠지만 잘 해결되었다.\n "
+},
+{
+	"uri": "https://cybertramp.net/linux/20210822_003/",
+	"title": "Build - nvme-cli",
+	"tags": null,
+	"description": "",
+	"content": "1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다.\nmkdir -p plugins/todd   plugins/todd/todd-nvme.h\n#undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme  #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME  #include \u0026#34;cmd.h\u0026#34;#include \u0026lt;stdio.h\u0026gt; PLUGIN(NAME(\u0026#34;todd\u0026#34;, \u0026#34;Todd plugin\u0026#34;), COMMAND_LIST( ENTRY(\u0026#34;list\u0026#34;,\u0026#34;List available FADU devices\u0026#34;,todd_list) ) ); #endif  #include \u0026#34;define_cmd.h\u0026#34;  plugins/todd/todd-nvme.c\n#include \u0026#34;nvme.h\u0026#34; #define CREATE_CMD #include \u0026#34;todd-nvme.h\u0026#34; static int todd_list(int argc, char **argv, struct command *cmd, struct plugin *plugin){ printf(\u0026#34;Hello world!\u0026#34;); return 0; }   Makefile\n# 변경전 PLUGIN_OBJS := \\  plugins/intel/intel-nvme.o \\  plugins/lnvm/lnvm-nvme.o \\  plugins/memblaze/memblaze-nvme.o \\  plugins/wdc/wdc-nvme.o \\  plugins/wdc/wdc-utils.o \\  plugins/huawei/huawei-nvme.o \\  plugins/netapp/netapp-nvme.o \\  plugins/toshiba/toshiba-nvme.o \\  plugins/micron/micron-nvme.o \\  plugins/seagate/seagate-nvme.o \\  plugins/virtium/virtium-nvme.o \\  plugins/shannon/shannon-nvme.o \\  plugins/dera/dera-nvme.o # 변경후 PLUGIN_OBJS := \\  plugins/intel/intel-nvme.o \\  plugins/lnvm/lnvm-nvme.o \\  plugins/memblaze/memblaze-nvme.o \\  plugins/wdc/wdc-nvme.o \\  plugins/wdc/wdc-utils.o \\  plugins/huawei/huawei-nvme.o \\  plugins/netapp/netapp-nvme.o \\  plugins/toshiba/toshiba-nvme.o \\  plugins/micron/micron-nvme.o \\  plugins/seagate/seagate-nvme.o \\  plugins/virtium/virtium-nvme.o \\  plugins/shannon/shannon-nvme.o \\  plugins/dera/dera-nvme.o \\  plugins/todd/todd-nvme.o   컴파일/설치/실행\npwd /root/nvme-cli # run on root permission state! make clean make make install # run  /usr/sbin/nvme nvme todd list   "
+},
+{
+	"uri": "https://cybertramp.net/linux/installation/20210822_005/",
+	"title": "Installation - ElasticSearch",
+	"tags": null,
+	"description": "",
+	"content": " 주의   service로 동작하므로 wsl에서 테스트 불가\n  참고  https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-20-04    $ curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - $ echo \u0026#34;deb https://artifacts.elastic.co/packages/7.x/apt stable main\u0026#34; | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list $ sudo apt update $ sudo apt install elasticsearch $ sudo vi /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml\n# ---------------------------------- Network -----------------------------------## Set the bind address to a specific IP (IPv4 or IPv6):#network.host:localhost$ sudo systemctl start elasticsearch $ sudo systemctl enable elasticsearch   Request Test\n$ curl -X GET \u0026#34;localhost:9200\u0026#34; [Pasted image 20210527112333.png]]   Install Kibana  $ sudo apt install nginx $ sudo apt install kibana $ sudo systemctl enable kibana $ sudo systemctl start kibana $ echo \u0026#34;kibanaadmin:`openssl passwd -apr1`\u0026#34; | sudo tee -a /etc/nginx/htpasswd.users $ sudo vi /etc/nginx/sites-available/{SERVER_NAME}   localhost 이외에서 접근 허용\n/etc/kibana/kibana.yml\nserver.host:\u0026#34;0.0.0.0\u0026#34;elasticsearch.hosts:\\[\u0026#34;http://localhost:9200\u0026#34;\\]   /etc/nginx/sites-available/{SERVER_NAME}\nserver { listen 5601; server_name your_domain; auth_basic \u0026#34;Restricted Access\u0026#34;; auth_basic_user_file /etc/nginx/htpasswd.users; location / { proxy_pass http://localhost:5601; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection \u0026#39;upgrade\u0026#39;; proxy_set_header Host $host; proxy_cache_bypass $http_upgrade; } } $ sudo ln -s /etc/nginx/sites-available/{SERVER_NAME} /etc/nginx/sites-enabled/{SERVER_NAME} $ sudo nginx -t $ sudo systemctl start nginx $ sudo systemctl enable nginx $ sudo systemctl reload nginx Install Logstash  $ sudo apt install logstash $ sudo vi /etc/logstash/conf.d/logstash.conf /etc/logstash/conf.d/logstash.conf\ninput { file { path =\u0026gt; [ \u0026#34;/FADU-FTP/TESTLOGS/*.*\u0026#34; ] start_position =\u0026gt; \u0026#34;beginning\u0026#34; sincedb_path =\u0026gt; \u0026#34;/dev/null\u0026#34; } } filter { grok { match =\u0026gt; {\u0026#34;path\u0026#34; =\u0026gt; \u0026#34;%{GREEDYDATA:lotid}_ST470_%{GREEDYDATA:tester}-%{GREEDYDATA:dut}_%{GREEDYDATA:testtime}.txt\u0026#34;} } } output { elasticsearch { hosts =\u0026gt; [\u0026#34;localhost:9200\u0026#34;] } } # configure test $ sudo -u logstash /usr/share/logstash/bin/logstash --path.settings /etc/logstash -t "
+},
+{
+	"uri": "https://cybertramp.net/linux/installation/20210822_004/",
+	"title": "Installation - gitea(docker)",
+	"tags": null,
+	"description": "",
+	"content": "참고\n https://docs.docker.com/compose/install/ https://docs.gitea.io/en-us/install-with-docker/  apt install docker docker.io -y sudo curl -L \u0026#34;[https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)](https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname%20-s)-$(uname%20-m))\u0026#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose mkdir dockers cd dockers vi docker-compose.yml docker-compose.yml\nversion:\u0026#34;2\u0026#34;networks:gitea:external:falseservices:server:image:gitea/gitea:latestenvironment:- USER\\_UID=1000- USER\\_GID=1000restart:alwaysnetworks:- giteavolumes:- ./gitea:/data- /etc/timezone:/etc/timezone:ro- /etc/localtime:/etc/localtime:roports:- \u0026#34;3000:3000\u0026#34;- \u0026#34;2222:22\u0026#34;docker-compose up docker-compose start "
+},
+{
+	"uri": "https://cybertramp.net/linux/installation/20210822_001/",
+	"title": "Installation - Mongo DB",
+	"tags": null,
+	"description": "",
+	"content": "참고\n1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo \u0026#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse\u0026#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.\nmongo\nuse admin db.createUser( { user: \u0026#34;원하는 계정 이름\u0026#34;, pwd: \u0026#34;패스워드\u0026#34;, roles: [\u0026#39;root\u0026#39;] } ) 6. MongoDB 바인딩 설정 및 관리자 계정 설정 기본적으로 처음에 127.0.0.1로 바인딩 되게 설정되어 있으므로 수정해주어야 외부에서 접근이 가능하다. 또한 MongoDB는 기존 Mysql or MariaDB와 달리 설치시 계정을 설정하지 않는다. 따라서 보안을 위해 따로 설정을 해주어야한다.\n/etc/mongod.conf\n# network interfaces net: port: 27017 bindIp: 0.0.0.0 # Authentication security: authorization: enabled 7. 접속 확인 세가지 방법이 가능하다. 커맨드를 통해 or 쉘에 들어가있는 상태 or ORM을 통한 접속 확인\n  커맨드\nmongo -u \u0026#34;admin\u0026#34; -p --authenticationDatabase \u0026#34;admin\u0026#34;   쉘\nuse admin db.auth(\u0026#34;계정\u0026#34;, \u0026#34;암호\u0026#34; )   Mongoose\nmongoose.connect(\u0026#39;mongodb://계정:암호@호스트:포트/admin\u0026#39;, { dbName: \u0026#39;사용할 데이터베이스\u0026#39; });    몽고 DB는 실제로도 DB에 계정을 설정안해 암호화 당하고 비트코인 요구를 당한 적이 있으니 필이 계정을 설정하여 접근하는 것이좋다.\n "
+},
+{
+	"uri": "https://cybertramp.net/windows/20191123_001/",
+	"title": "Windows Terminal에서 시작 디렉토리 지정하기",
+	"tags": null,
+	"description": "",
+	"content": "Windows Terminal을 설치하고 실행하면 경로가 윈도우의 홈 디렉토리로 시작하게 된다. 작업하는데 매번 해당 경로를 타고 다시 이동해야하는 번거로움을 줄이기 위해 설정한다.\n  기존 예제\n기존에는 \u0026quot;startingDirectory\u0026quot; 속성이 없어서 터미널 실행시 아래와 같은 위치로 시작한다.\n[설정된 속성]\n{ \u0026#34;guid\u0026#34;: \u0026#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}\u0026#34;, \u0026#34;hidden\u0026#34;: false, \u0026#34;name\u0026#34;: \u0026#34;Ubuntu-18.04\u0026#34;, \u0026#34;source\u0026#34;: \u0026#34;Windows.Terminal.Wsl\u0026#34; }, [터미널 시작시]\nparan_son@pandorica:/mnt/c/Users/paran_son$   위치를 WSL 내 사용자 홈 디렉토리로 변경\n 여기서 home 디렉토리 아래 사용자명은 WSL 내 사용자 명으로 설정해주어야 한다.\n \u0026lt;수정된 속성\u0026gt;\n{ \u0026#34;guid\u0026#34;: \u0026#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}\u0026#34;, \u0026#34;hidden\u0026#34;: false, \u0026#34;name\u0026#34;: \u0026#34;Ubuntu-18.04\u0026#34;, \u0026#34;source\u0026#34;: \u0026#34;Windows.Terminal.Wsl\u0026#34;, \u0026#34;startingDirectory\u0026#34;: \u0026#34;\\\\\\\\wsl$\\\\Ubuntu-18.04\\\\home\\\\paran_son\u0026#34; }, \u0026lt;터미널 시작시\u0026gt;\ngreendot@pandorica:~$   위치를 c 드라이브 내 특정 디렉토리로 변경\n여기서는 c드라이브 내 working 디렉토리를 시작 위치로 지정한다.\n\u0026lt;수정된 속성\u0026gt;\n{ \u0026#34;guid\u0026#34;: \u0026#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}\u0026#34;, \u0026#34;hidden\u0026#34;: false, \u0026#34;name\u0026#34;: \u0026#34;Ubuntu-18.04\u0026#34;, \u0026#34;source\u0026#34;: \u0026#34;Windows.Terminal.Wsl\u0026#34;, \u0026#34;startingDirectory\u0026#34;: \u0026#34;../../working\u0026#34; }, \u0026lt;터미널 시작시\u0026gt;\ngreendot@pandorica:/mnt/c/working$   "
+},
+{
+	"uri": "https://cybertramp.net/linux/installation/20191028_001/",
+	"title": "Dlib 설치 \u0026 연동",
+	"tags": null,
+	"description": "",
+	"content": "[1] Dlib 설치 사전 상태  opencv4 버전, Visual Studio community 2019가 설치되어 있음\n 1. dlib 다운 공식페이지에서 다운로드 받고 압축풀기\n2. Cmake 다운 \u0026amp; 실행 공식페이지에서 Bianry로 다운로드\ncmake-3.16.0-win64-x64\\bin에서 cmake-gui.exe실행\n 내가 다운로드 받은 것은 x64용이다.\n   소스코드 경로 잡아주기\n  바이너리 빌드 위치 잡아주기\n  Configure 클릭\n  VIsual Studio 버전과 x64선택\n  먼저 에러가 빨갛게 에러가 나겠지만 OpenCV 경로 지정이 잘못되서 그럴것이다.\n OpenCD_DIR 경로 설정을 해주면 된다. opencv 경로는 C:/opencv/build\n  아래의 옵션 체크\n- DLIB_JPEG_SUPPORT\n- DLIB_PNG_SUPPORT\n- USE_AVX_INSTRUCTIONS\n- USE_SSE2_INSTRUCTIONS\n- USE_SSE4_INSTRUCTIONS\n  Configure 클릭\n  Generating done 뜨면 끝\n  3. 빌드 dlib-19.18\\dlib\\dlib_build\\dlib.sln 실행\n  빌드 -\u0026gt; 구성 관리자\n  빌드 모든 체크\n  닫고 빌드-솔루션 빌드\n 시간이 좀 걸려요 ㅠ\n   [2] Dlib 연동 사전 상태  먼저 빈 프로젝트가 생성되어 있으며, opencv4는 이미 연동 해놓은 상태이다.\n   프로젝트 - \u0026lt;프로젝트명\u0026gt; 속성\n  구성 속성 - VC++ 디렉터리 - 라이브러리 디렉터리 - 편집\n  C:\\dlib-19.18\\dlib\\dlib_build\\Debug 경로 추가\n 빌드 되었던 라이브러리 파일을 참조하기 위함\n   링커 - 입력 - 추가 종속성에서 dlib.lib 입력\n 나는 dlib.lib 파일명이 좀 이상하게 생성되었다.\ndlib-19.18\\dlib\\dlib_build\\Debug 에 있는 lib 명을 입력할 것\n   "
+},
+{
+	"uri": "https://cybertramp.net/linux/installation/20191027_001/",
+	"title": "PowerPC64 환경에서 CentOS7",
+	"tags": null,
+	"description": "",
+	"content": "Ubuntu 환경 위에서 qemu-system-ppc를 통해 CentOS 7을 실행한다.\n 하루를 삽질했다\u0026hellip;ㅠ\n 1. 설치 1) CentOS7 minimal 다운로드 ppc 아키텍쳐 버전의 CentOS7은 다음 사이트에서 다운 받는다.\nhttp://isoredirect.centos.org/altarch/7/isos/ppc64/\n원하는 미러 사이트에서 CentOS-7-ppc64-Minimal-1908.iso을 내려 받으면된다.\n 나는 http://mirror.xtom.com.hk/centos-altarch/7.7.1908/isos/ppc64/ 이 미러에서 받았다. 가장 빨랐다.\n 2) qemu 설치   qemu 설치\nsudo apt install qemu-kvm qemu virt-manager virt-viewer libvirt-bin -y   ppc용 설치\nsudo apt install qemu-system-ppc openbios-ppc -y   3) 브릿지 설정   설치\nsudo apt install bridge-utils uml-utilities -y   브릿지 설정\n브릿지 할 인터페이스는 enp3s0를 기준으로 함\n# 브릿지 br0 인터페이스 생성 sudo brctl addbr br0 # enp3s0의 IP 클리어 sudo ip addr flush dev enp3s0 # br0를 enp3s0와 브릿지 sudo brctl addif br0 enp3s0 # tap 인터페이스 생성 sudo tunctl -t tap0 -u `whoami` # br0를 tap0와 브릿지 sudo brctl addif br0 tap0   인터페이스 활성화\nifconfig enp3s0 up ifconfig tap0 up ifconfig br0 up   브릿지 확인 및 br0에 ip 할당\nbrctl show \u0026amp;\u0026amp; sudo dhclient -v br0   4) 가상 디스크 생성 가상 디스크를 생성한다. qcow2 방식의 20G로 생성한다.\nqemu-img create -f qcow2 powerpc32.img 20G 5) VNC 클라이언트 설치 윈도우의 경우 TigerVNC를 사용하고 우분투인 경우 아래와 같이 설치한다.\nRemmina는 기본적으로 ssh, vnc, rdp를 지원하는 원격 접속 클라이언트이다.\nsudo apt install remmina -y 6) 에뮬레이터 실행 여러 가지 옵션으로 진행했기에 입맛에 맞춰 진행해야한다.\n[진행]   가상 디스크에 OS 설치 전\nsudo qemu-system-ppc64 \\ -m 1024 \\ -boot d \\ -hda powerpc32.img \\ -netdev tap,id=mynet0,ifname=tap0,script=no,downscript=no -device -cdrom CentOS-7-ppc64-Minimal-1908.iso \\ -vnc 0.0.0.0:5 \\ -usbdevice tablet   가상 디스크에 OS 설치 후\nOS 설치가 완료됬기 때문에 CD를 빼는 것 처럼 두 개의 옵션을 제거 한다. -boot, -cdrom\nsudo qemu-system-ppc64 \\ -m 1024 \\ -hda powerpc32.img \\ -netdev tap,id=mynet0,ifname=tap0,script=no,downscript=no -device e1000,netdev=mynet0,mac=52:54:00:fa:ce:11 \\  -vnc 0.0.0.0:5 \\  -usbdevice tablet   [옵션] 옵션이 너무나도 많기에 옵션을 정리해둔다.\n-m 1024: 메모리 1024MB 할당, 최대 2047MB\n-hda powerpc32.img: 특정 가상 디스크 파일을 가상 드라이브로 설정\n-boot d: CD-ROM을 우선 부팅(c 인 경우 첫번째 가상 드라이브 우선 부팅)\n-netdev tap,id=mynet0,ifname=tap0,script=no,downscript=no -device : 가상 네트워크 케이블(TAP)를 통해 QEMU 게스트 OS와 연결, 호스트에서는 브릿지된 tap0가 먼저 설정되어야 함\n-vnc 0.0.0.0:5: 게스트 OS의 화면을 VNC로 중계, 0.0.0.0:5은 모든 네트워크로 포트 5번을 의미. 만약 127.0.0.1이라면 QEMU를 실행중인 호스트OS만 접근이 가능\n-usbdevice tablet: 이중 커서 문제를 해결하기 위함, 이 옵션을 지정하지 않으면 VNC 연결시 호스트 OS 커서와 게스트 OS 커서 두 개가 생김\n 참고\nqemu 설치: https://www.unixmen.com/how-to-install-and-configure-qemu-in-ubuntu/\n네트워크 관련: https://gist.github.com/nstarke/c6593da117c459c18c255395211fa311\n네트워크 관련: https://www.linux-kvm.org/page/Networking\nppc 구동 관련: https://gmplib.org/~tege/qemu.html\nvirt-manager 관련: https://moriskim.wordpress.com/2014/02/24/virtio_with_kvm/\n커널, initrd 관련: https://gist.github.com/nstarke/c6593da117c459c18c255395211fa311\nqemu 옵션들: https://wiki.gentoo.org/wiki/QEMU/Options#Boot_order\n "
+},
+{
+	"uri": "https://cybertramp.net/computer_language/golang/",
+	"title": "/go",
+	"tags": null,
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/categories/",

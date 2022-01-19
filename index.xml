@@ -40,5 +40,101 @@ GOOS=linux GOARCH=amd64 go build -v xxxx.go GOOS=windows GOARCH=amd64 go build -
 2021/10/30 04:26:49 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:50 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:51 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:52 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:53 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:54 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:55 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 2021/10/30 04:26:56 http: Accept error: accept tcp [::]:4547: accept4: too many open files; retrying in 1s 파일을 너무 많이 열어서 문제가 생긴건데, 원인이 뭔지 몰랐다.</description>
     </item>
     
+    <item>
+      <title>Build - nvme-cli</title>
+      <link>https://cybertramp.net/linux/20210822_003/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/20210822_003/</guid>
+      <description>1. 클론/컴파일/설치 git clone https://github.com/linux-nvme/nvme-cli.git cd nvme-cli make make install # RUN nvme --version 2. 커스텀 플러그인 추가 플러그인은 todd라는 명으로 추가한다.
+mkdir -p plugins/todd   plugins/todd/todd-nvme.h
+#undef CMD_INC_FILE #define CMD_INC_FILE plugins/todd/todd-nvme  #if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ) #define TODD_NVME  #include &amp;#34;cmd.h&amp;#34;#include &amp;lt;stdio.h&amp;gt; PLUGIN(NAME(&amp;#34;todd&amp;#34;, &amp;#34;Todd plugin&amp;#34;), COMMAND_LIST( ENTRY(&amp;#34;list&amp;#34;,&amp;#34;List available FADU devices&amp;#34;,todd_list) ) ); #endif  #include &amp;#34;define_cmd.h&amp;#34;  plugins/todd/todd-nvme.c
+#include &amp;#34;nvme.h&amp;#34; #define CREATE_CMD #include &amp;#34;todd-nvme.h&amp;#34; static int todd_list(int argc, char **argv, struct command *cmd, struct plugin *plugin){ printf(&amp;#34;Hello world!</description>
+    </item>
+    
+    <item>
+      <title>Installation - ElasticSearch</title>
+      <link>https://cybertramp.net/linux/installation/20210822_005/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20210822_005/</guid>
+      <description>주의   service로 동작하므로 wsl에서 테스트 불가
+  참고  https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-20-04    $ curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - $ echo &amp;#34;deb https://artifacts.elastic.co/packages/7.x/apt stable main&amp;#34; | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list $ sudo apt update $ sudo apt install elasticsearch $ sudo vi /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+# ---------------------------------- Network -----------------------------------## Set the bind address to a specific IP (IPv4 or IPv6):#network.host:localhost$ sudo systemctl start elasticsearch $ sudo systemctl enable elasticsearch   Request Test</description>
+    </item>
+    
+    <item>
+      <title>Installation - gitea(docker)</title>
+      <link>https://cybertramp.net/linux/installation/20210822_004/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20210822_004/</guid>
+      <description>참고
+ https://docs.docker.com/compose/install/ https://docs.gitea.io/en-us/install-with-docker/  apt install docker docker.io -y sudo curl -L &amp;#34;[https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)](https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname%20-s)-$(uname%20-m))&amp;#34; -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose mkdir dockers cd dockers vi docker-compose.yml docker-compose.yml
+version:&amp;#34;2&amp;#34;networks:gitea:external:falseservices:server:image:gitea/gitea:latestenvironment:- USER\_UID=1000- USER\_GID=1000restart:alwaysnetworks:- giteavolumes:- ./gitea:/data- /etc/timezone:/etc/timezone:ro- /etc/localtime:/etc/localtime:roports:- &amp;#34;3000:3000&amp;#34;- &amp;#34;2222:22&amp;#34;docker-compose up docker-compose start </description>
+    </item>
+    
+    <item>
+      <title>Installation - Mongo DB</title>
+      <link>https://cybertramp.net/linux/installation/20210822_001/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20210822_001/</guid>
+      <description>참고
+1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo &amp;#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse&amp;#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.
+mongo
+use admin db.createUser( { user: &amp;#34;원하는 계정 이름&amp;#34;, pwd: &amp;#34;패스워드&amp;#34;, roles: [&amp;#39;root&amp;#39;] } ) 6.</description>
+    </item>
+    
+    <item>
+      <title>Windows Terminal에서 시작 디렉토리 지정하기</title>
+      <link>https://cybertramp.net/windows/20191123_001/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/windows/20191123_001/</guid>
+      <description>Windows Terminal을 설치하고 실행하면 경로가 윈도우의 홈 디렉토리로 시작하게 된다. 작업하는데 매번 해당 경로를 타고 다시 이동해야하는 번거로움을 줄이기 위해 설정한다.
+  기존 예제
+기존에는 &amp;quot;startingDirectory&amp;quot; 속성이 없어서 터미널 실행시 아래와 같은 위치로 시작한다.
+[설정된 속성]
+{ &amp;#34;guid&amp;#34;: &amp;#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}&amp;#34;, &amp;#34;hidden&amp;#34;: false, &amp;#34;name&amp;#34;: &amp;#34;Ubuntu-18.04&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, [터미널 시작시]
+paran_son@pandorica:/mnt/c/Users/paran_son$   위치를 WSL 내 사용자 홈 디렉토리로 변경
+ 여기서 home 디렉토리 아래 사용자명은 WSL 내 사용자 명으로 설정해주어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Dlib 설치 &amp; 연동</title>
+      <link>https://cybertramp.net/linux/installation/20191028_001/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20191028_001/</guid>
+      <description>[1] Dlib 설치 사전 상태  opencv4 버전, Visual Studio community 2019가 설치되어 있음
+ 1. dlib 다운 공식페이지에서 다운로드 받고 압축풀기
+2. Cmake 다운 &amp;amp; 실행 공식페이지에서 Bianry로 다운로드
+cmake-3.16.0-win64-x64\bin에서 cmake-gui.exe실행
+ 내가 다운로드 받은 것은 x64용이다.
+   소스코드 경로 잡아주기
+  바이너리 빌드 위치 잡아주기
+  Configure 클릭
+  VIsual Studio 버전과 x64선택
+  먼저 에러가 빨갛게 에러가 나겠지만 OpenCV 경로 지정이 잘못되서 그럴것이다.</description>
+    </item>
+    
+    <item>
+      <title>PowerPC64 환경에서 CentOS7</title>
+      <link>https://cybertramp.net/linux/installation/20191027_001/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/installation/20191027_001/</guid>
+      <description>Ubuntu 환경 위에서 qemu-system-ppc를 통해 CentOS 7을 실행한다.
+ 하루를 삽질했다&amp;hellip;ㅠ
+ 1. 설치 1) CentOS7 minimal 다운로드 ppc 아키텍쳐 버전의 CentOS7은 다음 사이트에서 다운 받는다.
+http://isoredirect.centos.org/altarch/7/isos/ppc64/
+원하는 미러 사이트에서 CentOS-7-ppc64-Minimal-1908.iso을 내려 받으면된다.
+ 나는 http://mirror.xtom.com.hk/centos-altarch/7.7.1908/isos/ppc64/ 이 미러에서 받았다. 가장 빨랐다.
+ 2) qemu 설치   qemu 설치
+sudo apt install qemu-kvm qemu virt-manager virt-viewer libvirt-bin -y   ppc용 설치
+sudo apt install qemu-system-ppc openbios-ppc -y   3) 브릿지 설정   설치</description>
+    </item>
+    
   </channel>
 </rss>

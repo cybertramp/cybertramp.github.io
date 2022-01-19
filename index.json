@@ -35,13 +35,6 @@
 	"content": "test1\n"
 },
 {
-	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/test/",
-	"title": "test",
-	"tags": null,
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/210116_001/",
 	"title": "빌드가 안될때 해결법",
 	"tags": null,
@@ -81,7 +74,7 @@
 	"title": "GoLang 설치",
 	"tags": null,
 	"description": "",
-	"content": "Version: 1.17.6을 설치하는 방법이다.\n  다운 및 설치\n# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go \u0026amp;\u0026amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version    프로젝트 생성 \u0026amp; 셋업\ncd {project dict} go mod init {package name} go mod tidy go build    Compile\nGOOS=linux GOARCH=amd64 go build -v xxxx.go GOOS=windows GOARCH=amd64 go build -v xxxx.go    "
+	"content": "Version: 1.17.6을 설치하는 방법이다.\n  다운 및 설치\n# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go \u0026amp;\u0026amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version   프로젝트 생성 \u0026amp; 셋업\ncd {project dict} go mod init {package name} go mod tidy go build   Compile\nGOOS=linux GOARCH=amd64 go build -v xxxx.go GOOS=windows GOARCH=amd64 go build -v xxxx.go    "
 },
 {
 	"uri": "https://cybertramp.net/computer_language/golang/211107_001/",

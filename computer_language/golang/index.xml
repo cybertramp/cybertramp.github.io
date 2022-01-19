@@ -15,8 +15,8 @@
       <guid>https://cybertramp.net/computer_language/golang/220119_001/</guid>
       <description>Version: 1.17.6을 설치하는 방법이다.
   다운 및 설치
-# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version    프로젝트 생성 &amp;amp; 셋업
-cd {project dict} go mod init {package name} go mod tidy go build    Compile
+# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version   프로젝트 생성 &amp;amp; 셋업
+cd {project dict} go mod init {package name} go mod tidy go build   Compile
 GOOS=linux GOARCH=amd64 go build -v xxxx.go GOOS=windows GOARCH=amd64 go build -v xxxx.go    </description>
     </item>
     

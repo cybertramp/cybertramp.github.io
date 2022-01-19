@@ -8,15 +8,6 @@
     <language>ko-kr</language>
     <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test</title>
-      <link>https://cybertramp.net/computer_language/python3/pyqt5/test/</link>
-      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cybertramp.net/computer_language/python3/pyqt5/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>빌드가 안될때 해결법</title>
       <link>https://cybertramp.net/computer_language/python3/pyqt5/210116_001/</link>
       <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
@@ -34,8 +25,8 @@
       <guid>https://cybertramp.net/computer_language/golang/220119_001/</guid>
       <description>Version: 1.17.6을 설치하는 방법이다.
   다운 및 설치
-# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version    프로젝트 생성 &amp;amp; 셋업
-cd {project dict} go mod init {package name} go mod tidy go build    Compile
+# wget sudo -i mkdir go; cd go wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz exit go version   프로젝트 생성 &amp;amp; 셋업
+cd {project dict} go mod init {package name} go mod tidy go build   Compile
 GOOS=linux GOARCH=amd64 go build -v xxxx.go GOOS=windows GOARCH=amd64 go build -v xxxx.go    </description>
     </item>
     

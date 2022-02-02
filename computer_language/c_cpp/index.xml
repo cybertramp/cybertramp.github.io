@@ -6,5 +6,23 @@
     <description>Recent content in /c_cpp on Cybertramp Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language><atom:link href="https://cybertramp.net/computer_language/c_cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QT Framework</title>
+      <link>https://cybertramp.net/computer_language/c_cpp/qt5/20200901_001/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/computer_language/c_cpp/qt5/20200901_001/</guid>
+      <description>Qt Qt는 GUI 프로그램 개발에 널리 쓰이는 크로스 플랫폼 프레임워크. Qt는 한번쓰고 여러 플랫폼용으로 컴파일하는것을 메인으로 개발된 프레임워크이다.
+  현재 버전
+2020년 9월 기준 Qt 5.15와 Qt 4.11.1이 최신
+  License
+두가지 라이센스 방식이 존재
+  Commercial License
+외부에 코드를 공개하지 않고도 독점적인 SW 개발 가능
+연간 구독요금이 $3950, UI 빌더 툴 별도(추가 연간 $999)
+  GNU LGPL 버전 2.1
+Qt 5.6(2016.03 Released) 까지까지 해당 라이센스였음</description>
+    </item>
+    
   </channel>
 </rss>

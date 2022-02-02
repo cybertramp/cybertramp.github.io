@@ -18,5 +18,18 @@ mkdir -p plugins/todd   plugins/todd/todd-nvme.h
 #include &amp;#34;nvme.h&amp;#34; #define CREATE_CMD #include &amp;#34;todd-nvme.h&amp;#34; static int todd_list(int argc, char **argv, struct command *cmd, struct plugin *plugin){ printf(&amp;#34;Hello world!</description>
     </item>
     
+    <item>
+      <title>zip file permission</title>
+      <link>https://cybertramp.net/linux/20200903_001/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/linux/20200903_001/</guid>
+      <description>원래 tar는 permission을 그대로 가지고 묶고 zip은 permission을 포함하지 않고 압축을 했음.
+하지만 info-ZIP 3.0 부터 file/dirs UNIX permission과 UID/GID 소유권을 포함 할 수 있게 되었음. unix와 Windows NT에서는 보존하여 압축, 압축 해제 가능하나 Windows에서는 불가능함.
+ unzip의 관련 내용
+https://unix.stackexchange.com/questions/313656/preserving-permissions-while-zipping
+Dates, times and permissions of stored directories are not restoredexcept under Unix. (On Windows NT and successors, timestamps are nowrestored.)   permission 포함 압축 및 해제 옵션은 없어도 기본 적용</description>
+    </item>
+    
   </channel>
 </rss>

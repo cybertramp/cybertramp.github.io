@@ -2,17 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cybertramp.net/windows/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cybertramp.net/computer_language/c_cpp/</loc>
     <lastmod>2022-01-19T23:11:12+09:00</lastmod>
   </url><url>
     <loc>https://cybertramp.net/linux/installation/</loc>
     <lastmod>2022-01-19T23:11:12+09:00</lastmod>
   </url><url>
-    <loc>https://cybertramp.net/interesting_things/</loc>
-    <lastmod>2022-01-19T23:11:12+09:00</lastmod>
+    <loc>https://cybertramp.net/profile/</loc>
   </url><url>
     <loc>https://cybertramp.net/computer_language/python3/pyqt5/</loc>
     <lastmod>2022-01-19T23:11:12+09:00</lastmod>
@@ -23,10 +19,16 @@
     <loc>https://cybertramp.net/computer_language/python3/pyqt5/210116_001/</loc>
     <lastmod>2022-01-19T23:11:12+09:00</lastmod>
   </url><url>
-    <loc>https://cybertramp.net/linux/</loc>
-    <lastmod>2022-01-19T23:11:12+09:00</lastmod>
+    <loc>https://cybertramp.net/windows/</loc>
+    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cybertramp.net/computer_language/</loc>
+    <lastmod>2022-01-19T23:11:12+09:00</lastmod>
+  </url><url>
+    <loc>https://cybertramp.net/interesting_things/</loc>
+    <lastmod>2022-01-19T23:11:12+09:00</lastmod>
+  </url><url>
+    <loc>https://cybertramp.net/linux/</loc>
     <lastmod>2022-01-19T23:11:12+09:00</lastmod>
   </url><url>
     <loc>https://cybertramp.net/</loc>
@@ -50,6 +52,12 @@
   </url><url>
     <loc>https://cybertramp.net/linux/installation/20210822_001/</loc>
     <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cybertramp.net/linux/20200903_001/</loc>
+    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cybertramp.net/computer_language/c_cpp/qt5/20200901_001/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cybertramp.net/windows/20191123_001/</loc>
     <lastmod>2019-11-23T00:00:00+00:00</lastmod>

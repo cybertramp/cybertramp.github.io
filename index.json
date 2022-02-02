@@ -1,12 +1,5 @@
 [
 {
-	"uri": "https://cybertramp.net/windows/",
-	"title": "/windows",
-	"tags": null,
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://cybertramp.net/computer_language/c_cpp/",
 	"title": "/c_cpp",
 	"tags": null,
@@ -21,11 +14,11 @@
 	"content": ""
 },
 {
-	"uri": "https://cybertramp.net/interesting_things/",
-	"title": "/interest_things",
+	"uri": "https://cybertramp.net/profile/",
+	"title": "/profile",
 	"tags": null,
-	"description": "",
-	"content": "test1\n"
+	"description": "About me",
+	"content": " Hi! My name is Cybertramp.\n(paran_son(at)outlook.com) 📣 Current working as SW Engineer in FADU ssd company. \n👨‍💻 Career  2019.12~ Working at FADU. 2019.06~2019.07 Working as an intern at Digicap. 2018.07~2018.08 Working as an intern at ZEPL. 2018.06~2019.02 Worked at Sangmyung University P.E.L Lab. 2017.02~2017.10 Worked at SMsolutions.  📚 Education  2020.02 Graduated from Sangmyung University.  💽 Projects  ing\u0026hellip;  게임 유저 평가 사이트 개발 중(Go, MariaDB, Vue3)   Toy  개인 NAS 구축(promox, openNAS, gitea \u0026hellip;) php-richtext-editor 구현 블로그 서비스 DAMONOTE 개발.. 중 중단   FADU  JBOF 환경에서 다중 제어 툴 개발(C#) 양산 시퀸스 구축 양산 배포 서비스 구축(with dotnet, Vue2, mongoDB) 팀내 사내 장비를 위한 log parser 툴 개발(with PyQT) 팀내 gitlab CI/CD 환경 구축(yaml, linux) 팀내 검증 Test Case 구현(CPP) 팀내 사내 장비를 위한 monitoring 개발(with Go, Vue3)   Univ  openCV를 활용한 faceswap 구현 IoT 멀티탭 WiTab 개발(Flask, Raspberry PI) Penguin adventure(js, HTML5) BioRythm(MATLAB)   Digicap  openssl 라이브러리를 활용한 playOpenssl   P.E.L Lab  메시지 브로커 RabbitMQ 소프트웨어의 취약점 분석 기법 적용 연구 ASLR 기반 클라우드 하이퍼바이저 침해 대응기술 연구 블록체인 기반 신뢰 데이터 공유 시스템 개발   ZEPL  TensorFlow를 활용한 간단한 이미지 자동차 있는지 확인 프로젝트    🎫 Certificate  PC 정비사 ITQ 리눅스 마스터 네트워크 관리사 Redhat RHCSA 정보처리기사  "
 },
 {
 	"uri": "https://cybertramp.net/computer_language/python3/pyqt5/",
@@ -49,11 +42,11 @@
 	"content": "PyQT5 빌드가 안될때 해결하는 방법이다. 빌드시 상대 경로가 문제인 경우에서의 해결 방법.\n3699 WARNING: lib not found: api-ms-win-core-libraryloader-l1-2-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3704 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3706 WARNING: lib not found: api-ms-win-core-util-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3708 WARNING: lib not found: api-ms-win-core-errorhandling-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3712 WARNING: lib not found: api-ms-win-core-sysinfo-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3715 WARNING: lib not found: api-ms-win-core-interlocked-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3718 WARNING: lib not found: api-ms-win-core-winrt-string-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3720 WARNING: lib not found: api-ms-win-core-winrt-error-l1-1-1.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3723 WARNING: lib not found: api-ms-win-core-profile-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3725 WARNING: lib not found: api-ms-win-core-rtlsupport-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3732 WARNING: lib not found: api-ms-win-core-com-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3734 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-1.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3736 WARNING: lib not found: api-ms-win-core-synch-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3738 WARNING: lib not found: api-ms-win-core-winrt-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3740 WARNING: lib not found: api-ms-win-core-winrt-error-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3742 WARNING: lib not found: api-ms-win-core-debug-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3771 WARNING: lib not found: api-ms-win-core-path-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python39.dll 위와 같은 Warning 메시지가 뜨고 실행 파일이 실행되지 않는다면 다음과 같이 조치하면 된다.\n  Windows 설정에서 앱 실행 별칭에서 Python 관련된 것을 모두 해제하고 하나 하나 올려보며 확인한다.\n  그래도 안되면 PyQT5를 그냥 재설치 해주면된다.\npip install pyqt5\n  아래의 글들이 도움되었다.\n 윈도우10 에서 파이썬 사용시 경로가 꼬이는 경우 — 내 저장소 (tistory.com) pyinstaller 사용 시 WARNING lib not found api-ms-win 과 같은 에러가 발생하는 경우 · Tonic (jwgo.kr)  "
 },
 {
-	"uri": "https://cybertramp.net/linux/",
-	"title": "/linux",
+	"uri": "https://cybertramp.net/windows/",
+	"title": "/windows",
 	"tags": null,
 	"description": "",
-	"content": "test1\n"
+	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/computer_language/",
@@ -61,6 +54,20 @@
 	"tags": null,
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/interesting_things/",
+	"title": "/interest_things",
+	"tags": null,
+	"description": "",
+	"content": "Sorry, not ready..\n"
+},
+{
+	"uri": "https://cybertramp.net/linux/",
+	"title": "/linux",
+	"tags": null,
+	"description": "",
+	"content": "test1\n"
 },
 {
 	"uri": "https://cybertramp.net/",
@@ -110,6 +117,20 @@
 	"tags": null,
 	"description": "",
 	"content": "참고\n1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo \u0026#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse\u0026#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.\nmongo\nuse admin db.createUser( { user: \u0026#34;원하는 계정 이름\u0026#34;, pwd: \u0026#34;패스워드\u0026#34;, roles: [\u0026#39;root\u0026#39;] } ) 6. MongoDB 바인딩 설정 및 관리자 계정 설정 기본적으로 처음에 127.0.0.1로 바인딩 되게 설정되어 있으므로 수정해주어야 외부에서 접근이 가능하다. 또한 MongoDB는 기존 Mysql or MariaDB와 달리 설치시 계정을 설정하지 않는다. 따라서 보안을 위해 따로 설정을 해주어야한다.\n/etc/mongod.conf\n# network interfaces net: port: 27017 bindIp: 0.0.0.0 # Authentication security: authorization: enabled 7. 접속 확인 세가지 방법이 가능하다. 커맨드를 통해 or 쉘에 들어가있는 상태 or ORM을 통한 접속 확인\n  커맨드\nmongo -u \u0026#34;admin\u0026#34; -p --authenticationDatabase \u0026#34;admin\u0026#34;   쉘\nuse admin db.auth(\u0026#34;계정\u0026#34;, \u0026#34;암호\u0026#34; )   Mongoose\nmongoose.connect(\u0026#39;mongodb://계정:암호@호스트:포트/admin\u0026#39;, { dbName: \u0026#39;사용할 데이터베이스\u0026#39; });    몽고 DB는 실제로도 DB에 계정을 설정안해 암호화 당하고 비트코인 요구를 당한 적이 있으니 필이 계정을 설정하여 접근하는 것이좋다.\n "
+},
+{
+	"uri": "https://cybertramp.net/linux/20200903_001/",
+	"title": "zip file permission",
+	"tags": null,
+	"description": "",
+	"content": "원래 tar는 permission을 그대로 가지고 묶고 zip은 permission을 포함하지 않고 압축을 했음.\n하지만 info-ZIP 3.0 부터 file/dirs UNIX permission과 UID/GID 소유권을 포함 할 수 있게 되었음. unix와 Windows NT에서는 보존하여 압축, 압축 해제 가능하나 Windows에서는 불가능함.\n unzip의 관련 내용\nhttps://unix.stackexchange.com/questions/313656/preserving-permissions-while-zipping\nDates, times and permissions of stored directories are not restored\rexcept under Unix. (On Windows NT and successors, timestamps are now\rrestored.)\r   permission 포함 압축 및 해제 옵션은 없어도 기본 적용\n root에서 진행하기를 권장함\n추가로 SUID/SGID/Sticky bits 까지 복원하려면 -K 옵션 사용\n zip xxxx.zip {files} unzip xxxx.zip -d {Target Dir}   "
+},
+{
+	"uri": "https://cybertramp.net/computer_language/c_cpp/qt5/20200901_001/",
+	"title": "QT Framework",
+	"tags": null,
+	"description": "",
+	"content": "Qt Qt는 GUI 프로그램 개발에 널리 쓰이는 크로스 플랫폼 프레임워크. Qt는 한번쓰고 여러 플랫폼용으로 컴파일하는것을 메인으로 개발된 프레임워크이다.\n  현재 버전\n2020년 9월 기준 Qt 5.15와 Qt 4.11.1이 최신\n  License\n두가지 라이센스 방식이 존재\n  Commercial License\n외부에 코드를 공개하지 않고도 독점적인 SW 개발 가능\n연간 구독요금이 $3950, UI 빌더 툴 별도(추가 연간 $999)\n  GNU LGPL 버전 2.1\nQt 5.6(2016.03 Released) 까지까지 해당 라이센스였음\n이후 버전 부터는 LGPL 3.0 -\u0026gt; 라이브러리 범위 소스코드 공개해야함(전체 코드는 아님)\n참고\n    언어\n C++, QML 언어 사용    사용 IDE\n  Qt Creator 4.0.3\n    1. 기본구조   기본 프로젝트 생성\ngit을 사용하는 조건으로 Qt 5.6 버전으로 프로젝트를 생성하는 과정이다.\n  기본 생성 파일\n기본적으로 프로젝트를 생성하면 다음의 파일들이 생성된다.\n  test2.pro\n프로젝트 파일\n  deployment/deployment.pri\n위의 *.pro 파일과 완전히 동일하며 Qt Project Include 파일이라고함. 공통적으로 필요한 환경을 이 파일에 설정하고 *.pro 파일에 include 하여 사용\n  Sources/main.cpp\n메인이 되는 cpp 파일\n  Resources/qml.qrc\n  main.qml\n말그대로 기본 생성되는 window의 qml 파일\nSources/main.cpp 에서 해당 파일을 로드함\n  MainForm.ui.qml\n이건 GUI 폼 파일인것 같은데 Dennis가 추천하지 않는 방식이라고함\n따라서 이건 지우고 해도 무방. main.qml에서 이 파일을 불러오는데 그 부분을 제거하면된다.\n      2. 기본 버튼및 이벤트 버튼을 추가하고 그에 따른 이벤트를 실행시켜 본다.\n  1번 방법\n이 방법은 slots을 사용하는 방법이다. 난 이 예제를 처음 봤기에 이걸 붙여 보았고 잘 동작한다.\nHeaders/globalobject.h\n#ifndef GLOBALOBJECT_H #define GLOBALOBJECT_H  #include \u0026lt;QObject\u0026gt; class GlobalObject : public QObject{ Q_OBJECT public: GlobalObject(); public slots: void doSomething(const QString \u0026amp;text); }; #endif // GLOBALOBJECT_H Sources/globalobject.cpp\n#include \u0026#34;globalobject.h\u0026#34;#include \u0026lt;QDebug\u0026gt; GlobalObject::GlobalObject() { // perform custom initialization steps here } void GlobalObject::doSomething(const QString \u0026amp;text) { qDebug() \u0026lt;\u0026lt; \u0026#34;GlobalObject doSomething called with\u0026#34; \u0026lt;\u0026lt; text; } Sources/main.cpp\n#include \u0026lt;QGuiApplication\u0026gt;#include \u0026lt;QQmlApplicationEngine\u0026gt;#include \u0026lt;QObject\u0026gt;#include \u0026lt;QQmlContext\u0026gt;#include \u0026#34;globalobject.h\u0026#34; int main(int argc, char *argv[]) { QGuiApplication app(argc, argv); QQmlApplicationEngine engine; GlobalObject* globalObj = new GlobalObject(); globalObj-\u0026gt;doSomething(\u0026#34;TEXT FROM C++\u0026#34;); engine.rootContext()-\u0026gt;setContextProperty(\u0026#34;globalobject\u0026#34;, globalObj); engine.load(QUrl(QStringLiteral(\u0026#34;qrc:/main.qml\u0026#34;))); return app.exec(); } Resources/qml.qrc/main.qml\nimport QtQuick 2.6 import QtQuick.Window 2.2 Window { visible: true width: 640 height: 480 title: qsTr(\u0026#34;Test\u0026#34;) Rectangle { id: button width: 100 height: 30 color: \u0026#34;red\u0026#34; radius: 5 anchors.centerIn: parent Text { id: \u0026#34;buttonText\u0026#34; text: qsTr(\u0026#34;Button\u0026#34;) color: \u0026#34;white\u0026#34; anchors.centerIn: parent } MouseArea{ anchors.fill: parent onClicked: globalobject.doSomething(\u0026#34;Pushed\u0026#34;) } } } 위 예제는 버튼을 누르면 콘솔 창에 Pushed 라는 텍스트가 출력되는 단순한 예제이다. 예제 2개를 합친것이라서 조금 이상하다.\n  동작은 정상적으로 된다.\n  2번 방법\nDennis가 추천해준 예제에서 가져온 방법이다.\nQ_PROPERTY 매크로 : QML Element 의 Property를 C++과 통신을 위한 기능\nQ_INVOKABLE : QML 에서 C++ 함수를 호출하는 방법\n  "
 },
 {
 	"uri": "https://cybertramp.net/windows/20191123_001/",

@@ -6,7 +6,7 @@
     <description>Recent content on Cybertramp Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>빌드가 안될때 해결법</title>
       <link>https://cybertramp.net/computer_language/python3/pyqt5/210116_001/</link>
@@ -15,6 +15,19 @@
       <guid>https://cybertramp.net/computer_language/python3/pyqt5/210116_001/</guid>
       <description>PyQT5 빌드가 안될때 해결하는 방법이다. 빌드시 상대 경로가 문제인 경우에서의 해결 방법.
 3699 WARNING: lib not found: api-ms-win-core-libraryloader-l1-2-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3704 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3706 WARNING: lib not found: api-ms-win-core-util-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3708 WARNING: lib not found: api-ms-win-core-errorhandling-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3712 WARNING: lib not found: api-ms-win-core-sysinfo-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3715 WARNING: lib not found: api-ms-win-core-interlocked-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.</description>
+    </item>
+    
+    <item>
+      <title>WezTerm Configure</title>
+      <link>https://cybertramp.net/windows/20220203_001/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/windows/20220203_001/</guid>
+      <description>Wez&amp;rsquo;s Terminal Emulator의 Config file 이다.
+lua 언어로 되어 있으며, 윈도우에서의 설정 파일 기본 위치는 C:\Program Files\WezTerm\wezterm.lua 이다.
+설정 파일 참고: [참고](Lua Reference - Wez&amp;rsquo;s Terminal Emulator (wezfurlong.org))
+아래는 내가 사용하는 Config 파일이다. (20220203 기준)
+local wezterm = require &amp;#39;wezterm&amp;#39;; return { default_prog = {&amp;#34;C:\\Windows\\system32\\wsl.exe&amp;#34;, &amp;#34;-d&amp;#34;, &amp;#34;Ubuntu-20.04&amp;#34;}, font = wezterm.font(&amp;#34;D2Coding&amp;#34;), font_size = 10.0, color_scheme = &amp;#34;Dracula&amp;#34;, launch_menu = { { label = &amp;#34;Debugging PC&amp;#34;, args = {&amp;#34;ssh&amp;#34;,&amp;#34;root@10.10.13.22&amp;#34;} }, { label = &amp;#34;DQ Server&amp;#34;, args = {&amp;#34;ssh&amp;#34;,&amp;#34;root@10.</description>
     </item>
     
     <item>
@@ -84,6 +97,17 @@ version:&amp;#34;2&amp;#34;networks:gitea:external:falseservices:server:image:gi
 1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo &amp;#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse&amp;#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.
 mongo
 use admin db.createUser( { user: &amp;#34;원하는 계정 이름&amp;#34;, pwd: &amp;#34;패스워드&amp;#34;, roles: [&amp;#39;root&amp;#39;] } ) 6.</description>
+    </item>
+    
+    <item>
+      <title>신기한 게임 Vampire Survivors</title>
+      <link>https://cybertramp.net/interesting_things/20220220_001/</link>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/interesting_things/20220220_001/</guid>
+      <description>최근에 Vampire Survivors 라는 게임이 Hot 하다고 들었다. 하지만 그냥 인디 게임이라 생각이 들어 지나치고 있었다. 그러다가 유튜브 알고리즘에 보여 내 눈에 들어오게 되었고 저렴한 금액에 구입을 하였고 게임을 해봤다.
+게임에 대한 조그만한 이야기.. 게임은 로그라이크 형식의 게임인데, 바인딩 오브 아이작이라는 게임과 비슷하다. 적들이 사방에서 계속 Gen되며, 자동으로 나가는 공격으로 방향키만 조작하여 적들을 죽인다.
+죽인 적에서는 경험치가 나오고 그 경험치를 먹고 레벨업을 하게되면 내가 원하는 무기트리와 버프 트리를 선택할 수 있다.</description>
     </item>
     
     <item>

@@ -5,8 +5,20 @@
     <link>https://cybertramp.net/windows/</link>
     <description>Recent content in /windows on Cybertramp Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
-    <lastBuildDate>Sat, 23 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/windows/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-kr</language><atom:link href="https://cybertramp.net/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WezTerm Configure</title>
+      <link>https://cybertramp.net/windows/20220203_001/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/windows/20220203_001/</guid>
+      <description>Wez&amp;rsquo;s Terminal Emulator의 Config file 이다.
+lua 언어로 되어 있으며, 윈도우에서의 설정 파일 기본 위치는 C:\Program Files\WezTerm\wezterm.lua 이다.
+설정 파일 참고: [참고](Lua Reference - Wez&amp;rsquo;s Terminal Emulator (wezfurlong.org))
+아래는 내가 사용하는 Config 파일이다. (20220203 기준)
+local wezterm = require &amp;#39;wezterm&amp;#39;; return { default_prog = {&amp;#34;C:\\Windows\\system32\\wsl.exe&amp;#34;, &amp;#34;-d&amp;#34;, &amp;#34;Ubuntu-20.04&amp;#34;}, font = wezterm.font(&amp;#34;D2Coding&amp;#34;), font_size = 10.0, color_scheme = &amp;#34;Dracula&amp;#34;, launch_menu = { { label = &amp;#34;Debugging PC&amp;#34;, args = {&amp;#34;ssh&amp;#34;,&amp;#34;root@10.10.13.22&amp;#34;} }, { label = &amp;#34;DQ Server&amp;#34;, args = {&amp;#34;ssh&amp;#34;,&amp;#34;root@10.</description>
+    </item>
+    
     <item>
       <title>Windows Terminal에서 시작 디렉토리 지정하기</title>
       <link>https://cybertramp.net/windows/20191123_001/</link>

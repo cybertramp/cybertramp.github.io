@@ -42,13 +42,6 @@
 	"content": "PyQT5 빌드가 안될때 해결하는 방법이다. 빌드시 상대 경로가 문제인 경우에서의 해결 방법.\n3699 WARNING: lib not found: api-ms-win-core-libraryloader-l1-2-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3704 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3706 WARNING: lib not found: api-ms-win-core-util-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3708 WARNING: lib not found: api-ms-win-core-errorhandling-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3712 WARNING: lib not found: api-ms-win-core-sysinfo-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3715 WARNING: lib not found: api-ms-win-core-interlocked-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3718 WARNING: lib not found: api-ms-win-core-winrt-string-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3720 WARNING: lib not found: api-ms-win-core-winrt-error-l1-1-1.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3723 WARNING: lib not found: api-ms-win-core-profile-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3725 WARNING: lib not found: api-ms-win-core-rtlsupport-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3732 WARNING: lib not found: api-ms-win-core-com-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3734 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-1.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3736 WARNING: lib not found: api-ms-win-core-synch-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3738 WARNING: lib not found: api-ms-win-core-winrt-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3740 WARNING: lib not found: api-ms-win-core-winrt-error-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3742 WARNING: lib not found: api-ms-win-core-debug-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python.exe 3771 WARNING: lib not found: api-ms-win-core-path-l1-1-0.dll dependency of C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\\python39.dll 위와 같은 Warning 메시지가 뜨고 실행 파일이 실행되지 않는다면 다음과 같이 조치하면 된다.\n  Windows 설정에서 앱 실행 별칭에서 Python 관련된 것을 모두 해제하고 하나 하나 올려보며 확인한다.\n  그래도 안되면 PyQT5를 그냥 재설치 해주면된다.\npip install pyqt5\n  아래의 글들이 도움되었다.\n 윈도우10 에서 파이썬 사용시 경로가 꼬이는 경우 — 내 저장소 (tistory.com) pyinstaller 사용 시 WARNING lib not found api-ms-win 과 같은 에러가 발생하는 경우 · Tonic (jwgo.kr)  "
 },
 {
-	"uri": "https://cybertramp.net/windows/",
-	"title": "/windows",
-	"tags": null,
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://cybertramp.net/computer_language/",
 	"title": "/computer_langs",
 	"tags": null,
@@ -60,14 +53,21 @@
 	"title": "/interest_things",
 	"tags": null,
 	"description": "",
-	"content": "Sorry, not ready..\n"
+	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/linux/",
 	"title": "/linux",
 	"tags": null,
 	"description": "",
-	"content": "test1\n"
+	"content": ""
+},
+{
+	"uri": "https://cybertramp.net/windows/",
+	"title": "/windows",
+	"tags": null,
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://cybertramp.net/",
@@ -75,6 +75,13 @@
 	"tags": null,
 	"description": "",
 	"content": "Hi! This site is cybertramp\u0026#39;s private space. 😁 I like anything computer-related. If you would like to visit the blog you used before, please refer to the address below. cybertramp.tistory.com Thanks! 퇴근하고 짬짬이 업데이트 하고있어요 🦾\n이젠 미루지 않고 모두 모으고 정리하려 합니다.\n아래는 앞으로 추가할 기능이네요.\n 블로그 시작 땅 디자인 최적화 글의 이미지 연동 글 업데이트 Disqus 기능 추가   "
+},
+{
+	"uri": "https://cybertramp.net/windows/20220203_001/",
+	"title": "WezTerm Configure",
+	"tags": null,
+	"description": "",
+	"content": "Wez\u0026rsquo;s Terminal Emulator의 Config file 이다.\nlua 언어로 되어 있으며, 윈도우에서의 설정 파일 기본 위치는 C:\\Program Files\\WezTerm\\wezterm.lua 이다.\n설정 파일 참고: [참고](Lua Reference - Wez\u0026rsquo;s Terminal Emulator (wezfurlong.org))\n아래는 내가 사용하는 Config 파일이다. (20220203 기준)\nlocal wezterm = require \u0026#39;wezterm\u0026#39;; return { default_prog = {\u0026#34;C:\\\\Windows\\\\system32\\\\wsl.exe\u0026#34;, \u0026#34;-d\u0026#34;, \u0026#34;Ubuntu-20.04\u0026#34;}, font = wezterm.font(\u0026#34;D2Coding\u0026#34;), font_size = 10.0, color_scheme = \u0026#34;Dracula\u0026#34;, launch_menu = { { label = \u0026#34;Debugging PC\u0026#34;, args = {\u0026#34;ssh\u0026#34;,\u0026#34;root@10.10.13.22\u0026#34;} }, { label = \u0026#34;DQ Server\u0026#34;, args = {\u0026#34;ssh\u0026#34;,\u0026#34;root@10.10.13.21\u0026#34;} }, { label = \u0026#34;PowerShell\u0026#34;, args = {\u0026#34;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\u0026#34;,\u0026#34;-nologo\u0026#34;} } }, keys = { {key=\u0026#34;F1\u0026#34;, mods=\u0026#34;\u0026#34;, action=\u0026#34;ShowLauncher\u0026#34;}, }, hyperlink_rules = { -- Linkify things that look like URLs -- This is actually the default if you don\u0026#39;t specify any hyperlink_rules { regex = \u0026#34;\\\\b\\\\w+://(?:[\\\\w.-]+)\\\\.[a-z]{2,15}\\\\S*\\\\b\u0026#34;, format = \u0026#34;$0\u0026#34;, }, -- file:// URI { regex = \u0026#34;\\\\bfile://\\\\S*\\\\b\u0026#34;, format = \u0026#34;$0\u0026#34;, } } } "
 },
 {
 	"uri": "https://cybertramp.net/computer_language/golang/220119_001/",
@@ -117,6 +124,13 @@
 	"tags": null,
 	"description": "",
 	"content": "참고\n1. 키 추가 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add - 2. 레포지토리 추가 echo \u0026#34;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse\u0026#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list 3. 패키지 최신화 및 설치 sudo apt update sudo apt-get install -y mongodb-org 4. 서비스 시작 service mongod start service mongod enable service mongod status 5. 관리자 계정 생성 MongoDB CLI를 통해 인증을 위한 관리자 계정을 생성한다.\nmongo\nuse admin db.createUser( { user: \u0026#34;원하는 계정 이름\u0026#34;, pwd: \u0026#34;패스워드\u0026#34;, roles: [\u0026#39;root\u0026#39;] } ) 6. MongoDB 바인딩 설정 및 관리자 계정 설정 기본적으로 처음에 127.0.0.1로 바인딩 되게 설정되어 있으므로 수정해주어야 외부에서 접근이 가능하다. 또한 MongoDB는 기존 Mysql or MariaDB와 달리 설치시 계정을 설정하지 않는다. 따라서 보안을 위해 따로 설정을 해주어야한다.\n/etc/mongod.conf\n# network interfaces net: port: 27017 bindIp: 0.0.0.0 # Authentication security: authorization: enabled 7. 접속 확인 세가지 방법이 가능하다. 커맨드를 통해 or 쉘에 들어가있는 상태 or ORM을 통한 접속 확인\n  커맨드\nmongo -u \u0026#34;admin\u0026#34; -p --authenticationDatabase \u0026#34;admin\u0026#34;   쉘\nuse admin db.auth(\u0026#34;계정\u0026#34;, \u0026#34;암호\u0026#34; )   Mongoose\nmongoose.connect(\u0026#39;mongodb://계정:암호@호스트:포트/admin\u0026#39;, { dbName: \u0026#39;사용할 데이터베이스\u0026#39; });    몽고 DB는 실제로도 DB에 계정을 설정안해 암호화 당하고 비트코인 요구를 당한 적이 있으니 필이 계정을 설정하여 접근하는 것이좋다.\n "
+},
+{
+	"uri": "https://cybertramp.net/interesting_things/20220220_001/",
+	"title": "신기한 게임 Vampire Survivors",
+	"tags": null,
+	"description": "",
+	"content": "최근에 Vampire Survivors 라는 게임이 Hot 하다고 들었다. 하지만 그냥 인디 게임이라 생각이 들어 지나치고 있었다. 그러다가 유튜브 알고리즘에 보여 내 눈에 들어오게 되었고 저렴한 금액에 구입을 하였고 게임을 해봤다.\n게임에 대한 조그만한 이야기.. 게임은 로그라이크 형식의 게임인데, 바인딩 오브 아이작이라는 게임과 비슷하다. 적들이 사방에서 계속 Gen되며, 자동으로 나가는 공격으로 방향키만 조작하여 적들을 죽인다.\n죽인 적에서는 경험치가 나오고 그 경험치를 먹고 레벨업을 하게되면 내가 원하는 무기트리와 버프 트리를 선택할 수 있다. 그러면 그 무기와 버프를 적절히 잘 선택해서 30분을 살아 남는 게임이다.\n글만 보면 이게 왜 인기 있지라는 생각이 들지만 매우 쉽고 저렴한데 나쁘지 않은 퀄리티를 가지고 있어서 그런 것 같다.\nThe Binding of Issac 은 5500원인 걸 생각하면 매우 괜찮다.. 나는 깨야겠다고 맘을 먹으면 왠만하면 될때 까지해서.. 여차 저차 첫번째, 두번째 맵을 클리어 했다. 세번째 맵은 29분 1X초에서 2번이나 죽어서 게임을 껐다\u0026hellip;\n이 게임이 JS로 만들었다고??? 여튼 게임을 플레이하고 회사에 출근했더니 메일 하나가 왔다. 노마드 코더를 가입해둬서 가끔 오는데\u0026hellip; Vampire Survivors 이야기가 있더라..\n\u0026lt;메일 내용\u0026gt;\n IT 최신 소식 줍줍  🎮 인터넷에서 난리 난 뱀파이어 서바이버 Steam 게임이 JS로만 만들었다는 놀라운 사실! 이 겜으로 30억 벌었다는 소문이\u0026hellip; 게임 제작한 개발자 Luca Galante의 인터뷰 보기    헉\u0026hellip; 이라는 생각이 순간 스쳤다.. \u0026lsquo;최근에 Python으로 만든 게임들이 있다는 이야기는 많이 들었지만.. JS로 만들었다니..\u0026rsquo;'\n\u0026lsquo;분명 2D래도.. 이렇게 많은 몬스터 오브젝트와 경험치 오브젝트에 랙도 안걸리던데\u0026hellip;\u0026rsquo; 라는 생각\u0026hellip;\n그러고 잊고 있다가 주말이되서 다시 한 번 이 게임을 살펴봤다..\nJS로 만들었다면 분명 게임 디렉토리에 v8 engine 관련한 것들이 있을 것 같았다.\n와.. 정말 v8이 적힌 파일들이 있었고 chromium 라이센스 문서가 있었다. 좀 더 찾아보니 webpack도 있고.. 신기하더라..\n아마 electron과 html5를 이용해서 만들었겠구나.. 라는 생각까지는 했고 분명 어떤 라이브러리가 있을 것 같아 찾아보다가 ..\n게임의 credits에서 다음 라이브러리를 사용했다고 적혀 있는 걸 찾았다.\n사용된 기술 스택\n [Phaser 3](Welcome to Phaser 3 - Phaser3 - Phaser)  Python의 RenPy 같은 JS용 게임 프레임워크이다\u0026hellip; 난 이런게 나온지 처음 알았다.. 근데 벌써 버전 3\u0026hellip; 몇 년전 기말고사로 제출 했던 내가 만든 HTML5 펭귄 게임이 떠오른다\u0026hellip; 허접한 \u0026hellip;   [RexPlugins](Notes of Phaser 3 (rexrainbow.github.io))  Phaser 3 관련하여 플러그인을 연결 해주는 라이브러리 같다.   [Electron](Notes of Phaser 3 (rexrainbow.github.io))  JS로 만들었다고 한 거보고 electron을 사용했을 것 같았다. 웹 브라우저 모양에서 돌아가는게 아니니깐..   [JuiceFX](Juice FX by CodeManu (itch.io))  이건 effect 주는 assets 인 듯 했다.    \u0026lsquo;그럼 electron을 쓴다면 웹에서도 돌아가겠네???\u0026rsquo;\n그렇다.. 웹 링크\n콘솔에서는 Phaser를 사용하고 있다고 뜬다!\n결론 이제는 JS로도 게임을 만들고 스팀에 올라가 판매가 되고 윈도우, 리눅스, 맥에서 나름 native하게 돌아간다..\n이제는 게임을 만들때 어떤 특정 언어에 구애 받지 않는 것 같다.. 물론 매우 높은 퀄리티의 게임과 같은 것들은 여전히 C++이 가장 뛰어 나겠지만..\n누구든 자기가 개발하고 있는 언어로 게임을 만들고자 하는 열정과 아이디어만 떠오른다면 시도해 볼만한 것 같다!\n"
 },
 {
 	"uri": "https://cybertramp.net/linux/20200903_001/",

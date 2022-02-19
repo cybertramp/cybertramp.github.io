@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="alternate" type="application/rss+xml" href="https://cybertramp.net/computer_language/c_cpp/index.xml" title="Cybertramp Blog" />
-    <link rel="canonical" href="https://cybertramp.net/computer_language/c_cpp/">
+    <link rel="canonical" href="https://cybertramp.net/windows/20220203_001/">
 
     <title>
         
-        /c_cpp | Cybertramp Blog
+        WezTerm Configure | Cybertramp Blog
         
     </title>
 
@@ -97,12 +96,12 @@
         
         <a class="nav-link p-0" href="https://cybertramp.net/profile/"><h6>/profile</h6></a>
     </li>
-    <li data-nav-id="/computer_language/" class="nav-item my-1 parent haschildren
+    <li data-nav-id="/computer_language/" class="nav-item my-1 haschildren
         ">
         
         <a class="nav-link p-0" href="https://cybertramp.net/computer_language/"><h6>/computer_langs</h6></a>
         <ul class="list-unstyled ml-2">
-    <li data-nav-id="/computer_language/c_cpp/" class="nav-item my-1 parent active haschildren
+    <li data-nav-id="/computer_language/c_cpp/" class="nav-item my-1 haschildren
         ">
         
         <a class="nav-link p-0" href="https://cybertramp.net/computer_language/c_cpp/"><h6>/c_cpp</h6></a>
@@ -225,12 +224,12 @@
         </li>
         </ul>
     </li>
-    <li data-nav-id="/windows/" class="nav-item my-1 haschildren
+    <li data-nav-id="/windows/" class="nav-item my-1 parent haschildren
         ">
         
         <a class="nav-link p-0" href="https://cybertramp.net/windows/"><h6>/windows</h6></a>
         <ul class="list-unstyled ml-2">
-        <li data-nav-id="/windows/20220203_001/" class="nav-item my-1">
+        <li data-nav-id="/windows/20220203_001/" class="nav-item my-1 active">
                 
                  <a href="https://cybertramp.net/windows/20220203_001/" class="nav-link p-0">
                     WezTerm Configure
@@ -257,23 +256,55 @@
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
-<main>
-    <article>
-        <header>
-            <h1>/c_cpp</h1>
-        </header>
-        
-        
-    </article>
-    <ul>
+
+<h1>WezTerm Configure</h1>
+<p><u>글을 쓴날: 2022-02-03</u></p>
+<p>Wez&rsquo;s Terminal Emulator의 Config file 이다.</p>
+<p>lua 언어로 되어 있으며, 윈도우에서의 설정 파일 기본 위치는 <code>C:\Program Files\WezTerm\wezterm.lua</code> 이다.</p>
+<p>설정 파일 참고:  [참고](<a href="https://wezfurlong.org/wezterm/config/lua/general.html">Lua Reference - Wez&rsquo;s Terminal Emulator (wezfurlong.org)</a>)</p>
+<p>아래는 내가 사용하는 Config 파일이다. (20220203 기준)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#007020;font-weight:bold">local</span> wezterm <span style="color:#666">=</span> require <span style="color:#4070a0">&#39;wezterm&#39;</span>;
+
+<span style="color:#007020;font-weight:bold">return</span> {
+  default_prog <span style="color:#666">=</span> {<span style="color:#4070a0">&#34;C:</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">Windows</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">system32</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">wsl.exe&#34;</span>, <span style="color:#4070a0">&#34;-d&#34;</span>, <span style="color:#4070a0">&#34;Ubuntu-20.04&#34;</span>},
+  font <span style="color:#666">=</span> wezterm.font(<span style="color:#4070a0">&#34;D2Coding&#34;</span>),
+  font_size <span style="color:#666">=</span> <span style="color:#40a070">10.0</span>,
+  color_scheme <span style="color:#666">=</span> <span style="color:#4070a0">&#34;Dracula&#34;</span>,
+  launch_menu <span style="color:#666">=</span> {
+	  {
+		label <span style="color:#666">=</span> <span style="color:#4070a0">&#34;Debugging PC&#34;</span>,
+		args <span style="color:#666">=</span> {<span style="color:#4070a0">&#34;ssh&#34;</span>,<span style="color:#4070a0">&#34;root@10.10.13.22&#34;</span>}
+	  },
+	  {
+		label <span style="color:#666">=</span> <span style="color:#4070a0">&#34;DQ Server&#34;</span>,
+		args <span style="color:#666">=</span> {<span style="color:#4070a0">&#34;ssh&#34;</span>,<span style="color:#4070a0">&#34;root@10.10.13.21&#34;</span>}
+	  },
+	  {
+		label <span style="color:#666">=</span> <span style="color:#4070a0">&#34;PowerShell&#34;</span>,
+		args <span style="color:#666">=</span> {<span style="color:#4070a0">&#34;C:</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">Windows</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">System32</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">WindowsPowerShell</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">v1.0</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">powershell.exe&#34;</span>,<span style="color:#4070a0">&#34;-nologo&#34;</span>}
+	  }
+  },
+  keys <span style="color:#666">=</span> {
+    {key<span style="color:#666">=</span><span style="color:#4070a0">&#34;F1&#34;</span>, mods<span style="color:#666">=</span><span style="color:#4070a0">&#34;&#34;</span>, action<span style="color:#666">=</span><span style="color:#4070a0">&#34;ShowLauncher&#34;</span>},
+  },
+  hyperlink_rules <span style="color:#666">=</span> {
+    <span style="color:#60a0b0;font-style:italic">-- Linkify things that look like URLs</span>
+    <span style="color:#60a0b0;font-style:italic">-- This is actually the default if you don&#39;t specify any hyperlink_rules</span>
+    {
+      regex <span style="color:#666">=</span> <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">b</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">w+://(?:[</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">w.-]+)</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">.[a-z]{2,15}</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">S*</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">b&#34;</span>,
+      format <span style="color:#666">=</span> <span style="color:#4070a0">&#34;$0&#34;</span>,
+    },
+    <span style="color:#60a0b0;font-style:italic">-- file:// URI</span>
+    {
+      regex <span style="color:#666">=</span> <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">bfile://</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">S*</span><span style="color:#4070a0;font-weight:bold">\\</span><span style="color:#4070a0">b&#34;</span>,
+      format <span style="color:#666">=</span> <span style="color:#4070a0">&#34;$0&#34;</span>,
+    }
+  }
+}
+</code></pre></div>
+
     
-    
-        <li>
-            <a href="https://cybertramp.net/computer_language/c_cpp/qt5/20200901_001/">2020-09-01 | QT Framework</a>
-        </li>
-    
-    </ul>
-</main>
+
 
                     
                     <div class="row"><div class="position-relative mx-auto col-lg-9">

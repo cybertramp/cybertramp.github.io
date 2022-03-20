@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cybertramp Blog</title>
-    <link>https://cybertramp.net/</link>
-    <description>Recent content on Cybertramp Blog</description>
+    <title>Posts on Cybertramp Blog</title>
+    <link>https://cybertramp.net/posts/</link>
+    <description>Recent content in Posts on Cybertramp Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>빌드가 안될때 해결법</title>
       <link>https://cybertramp.net/posts/20210116_001/</link>

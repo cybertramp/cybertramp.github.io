@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python3 on Cybertramp Blog</title>
+    <link>https://cybertramp.net/categories/python3/</link>
+    <description>Recent content in python3 on Cybertramp Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/categories/python3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>빌드가 안될때 해결법</title>
+      <link>https://cybertramp.net/posts/20210116_001/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20210116_001/</guid>
+      <description>PyQT5 빌드가 안될때 해결하는 방법이다. 빌드시 상대 경로가 문제인 경우에서의 해결 방법.
+3699 WARNING: lib not found: api-ms-win-core-libraryloader-l1-2-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3704 WARNING: lib not found: api-ms-win-core-processthreads-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3706 WARNING: lib not found: api-ms-win-core-util-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3708 WARNING: lib not found: api-ms-win-core-errorhandling-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3712 WARNING: lib not found: api-ms-win-core-sysinfo-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2288.0_x64__qbz5n2kfra8p0\python.exe 3715 WARNING: lib not found: api-ms-win-core-interlocked-l1-1-0.dll dependency of C:\Program Files\WindowsApps\PythonSoftwareFoundation.</description>
+    </item>
+    
+  </channel>
+</rss>

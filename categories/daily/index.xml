@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>daily on Cybertramp Blog</title>
+    <link>https://cybertramp.net/categories/daily/</link>
+    <description>Recent content in daily on Cybertramp Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 20 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/categories/daily/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typora 정착</title>
+      <link>https://cybertramp.net/posts/20220320_001/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20220320_001/</guid>
+      <description>이번주 평일에 시간되면 작업하려 했던 블로그 작업을 일요일이 되어서야 겨우 마쳤다. 잘 버티다가 오미크론에 걸리게 되어 거의 아무것도 못하게됬다.
+메뉴에 카테고리 넣기 뭐 어찌 어찌 답 없는 hugo의 Book | Hugo Themes (gohugo.io) 테마를 뜯어서 커스텀하게 만들었다. hugo는 GoLang의 Template이라는 모듈을 사용해서 문법이 조금 이해 하기 어렵다. 마치 bash를 보는듯했다. 그래도 hugo 문서랑 뒤적 거리면서 문서별 FrontMatter의 Category를 일일이 확인해서 메뉴에 분류되어 표시되게 해두었다.
+ ▲ 내 포스트 글은 markdown으로 작성하고 맨 윗부분에 FrontMatter를 toml 형식으로 달아둔다.</description>
+    </item>
+    
+  </channel>
+</rss>

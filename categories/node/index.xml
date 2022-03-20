@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node on Cybertramp Blog</title>
+    <link>https://cybertramp.net/categories/node/</link>
+    <description>Recent content in node on Cybertramp Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nodejs - installation nvm, yarn</title>
+      <link>https://cybertramp.net/posts/20220320_007/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20220320_007/</guid>
+      <description>nodejs를 버전별로 손쉽게 전환할 수 있는 nvm과 패키지 관리자 yarn을 설치하는 방법이다.
+nodejs를 활용하여 개발한다면 버전 호환성 문제가 발생할 수 있으므로 거의 필수이다.
+참고: nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions (github.com)
+nvm 설치 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash 	# 환경파일에 설정 vi ~/.zshrc export NVM_DIR=&amp;#34;$([ -z &amp;#34;${XDG_CONFIG_HOME-}&amp;#34; ] &amp;amp;&amp;amp; printf %s &amp;#34;${HOME}/.nvm&amp;#34; || printf %s &amp;#34;${XDG_CONFIG_HOME}/nvm&amp;#34;)&amp;#34; [ -s &amp;#34;$NVM_DIR/nvm.sh&amp;#34; ] &amp;amp;&amp;amp; \.</description>
+    </item>
+    
+  </channel>
+</rss>

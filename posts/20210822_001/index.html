@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://cybertramp.net/posts/20210822_001/">
+
+    <title>
+        
+        Build - nvme-cli | Cybertramp Blog
+        
+    </title>
+
+    
+    <link href="https://cybertramp.net/css/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cybertramp.net/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top" id="navbarMain">
+    <div class="container-fluid">
+        <div>
+            <a class="navbar-brand" href="../../">
+                
+                Cybertramp Blog
+            </a>
+        </div>
+            
+            
+            
+            <div class="collapse navbar-collapse" id="navbarMainCollapse">
+                <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://github.com/cybertramp" >
+                                    <i class='fab fa-github'></i>
+                                    </a>
+                                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cybertramp.net//profile">Profile</a>
+                    </li>
+                    
+                </ul>
+                
+                
+                <div class="navbar-nav">
+                    <form class="form-inline my-2 my-lg-0 searchbox">
+                        <input class="form-control w-100" data-search-input id="search-by" type="text" placeholder="Search" >
+                    </form>       
+                </div>
+                
+            </div>
+    </div>
+    
+</nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right">
+
+
+
+<div class="mt-2">
+  <div>
+    <div class="avatar-container">
+      <img src="../../img/metamong.gif" alt="Avatar" class="avatar-img" />
+      <div class="avatar-name-box">
+        <div class="avatar-text">회사에서는<br />Todd</div>
+      </div>
+    </div>
+    <div style="padding-top: 20px; text-align: center">
+      <h4>Cybertramp</h4>
+      <div>
+        <p>아래에서 위로</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <ul class="nav flex-column">
+      <h5 class="my-0">Categories</h5>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/cpp">Cpp (7)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/daily">Daily (1)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/golang">Golang (6)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/installation">Installation (3)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/interest">Interest (1)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/linux">Linux (6)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/node">Node (1)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/os">Os (1)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/python3">Python3 (1)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/vue">Vue (2)</a>
+      </li>
+      
+      <li class="nav-item menu-items">
+        <a href="../../categories/windows">Windows (5)</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<style>
+.menu-items{
+  padding: 4px 0 0 10px;
+}
+</style></div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>Build - nvme-cli</h1>
+<p><u>글을 쓴날: 2021-08-22</u></p>
+<h4 id="1-클론컴파일설치">1. 클론/컴파일/설치</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/linux-nvme/nvme-cli.git
+</span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> nvme-cli
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span>make install
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># RUN</span>
+</span></span><span style="display:flex;"><span>nvme --version
+</span></span></code></pre></div><h4 id="2-커스텀-플러그인-추가">2. 커스텀 플러그인 추가</h4>
+<p>플러그인은 todd라는 명으로 추가한다.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p plugins/todd
+</span></span></code></pre></div><ul>
+<li>
+<p><code>plugins/todd/todd-nvme.h</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#007020">#undef CMD_INC_FILE
+</span></span></span><span style="display:flex;"><span><span style="color:#007020">#define CMD_INC_FILE plugins/todd/todd-nvme
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">#if !defined(TODD_NVME) || defined(CMD_HEADER_MULTI_READ)
+</span></span></span><span style="display:flex;"><span><span style="color:#007020">#define TODD_NVME
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">#include</span> <span style="color:#007020">&#34;cmd.h&#34;</span><span style="color:#007020">
+</span></span></span><span style="display:flex;"><span><span style="color:#007020">#include</span> <span style="color:#007020">&lt;stdio.h&gt;</span><span style="color:#007020">
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span>
+</span></span><span style="display:flex;"><span>PLUGIN(NAME(<span style="color:#4070a0">&#34;todd&#34;</span>, <span style="color:#4070a0">&#34;Todd plugin&#34;</span>),
+</span></span><span style="display:flex;"><span>        COMMAND_LIST(
+</span></span><span style="display:flex;"><span>                ENTRY(<span style="color:#4070a0">&#34;list&#34;</span>,<span style="color:#4070a0">&#34;List available FADU devices&#34;</span>,todd_list)
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">#include</span> <span style="color:#007020">&#34;define_cmd.h&#34;</span><span style="color:#007020">
+</span></span></span></code></pre></div></li>
+<li>
+<p><code>plugins/todd/todd-nvme.c</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#include &#34;nvme.h&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#define CREATE_CMD</span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#include &#34;todd-nvme.h&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>static int todd_list<span style="color:#666">(</span>int argc, char **argv, struct <span style="color:#007020">command</span> *cmd, struct plugin *plugin<span style="color:#666">){</span>
+</span></span><span style="display:flex;"><span>        printf<span style="color:#666">(</span><span style="color:#4070a0">&#34;Hello world!&#34;</span><span style="color:#666">)</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">return</span> 0;
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p><code>Makefile</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># 변경전</span>
+</span></span><span style="display:flex;"><span>PLUGIN_OBJS :<span style="color:#666">=</span>                                  <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/intel/intel-nvme.o              <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/lnvm/lnvm-nvme.o                <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/memblaze/memblaze-nvme.o        <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/wdc/wdc-nvme.o                  <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/wdc/wdc-utils.o                 <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/huawei/huawei-nvme.o            <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/netapp/netapp-nvme.o            <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/toshiba/toshiba-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/micron/micron-nvme.o            <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/seagate/seagate-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/virtium/virtium-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/shannon/shannon-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/dera/dera-nvme.o
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># 변경후</span>
+</span></span><span style="display:flex;"><span>PLUGIN_OBJS :<span style="color:#666">=</span>                                  <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/intel/intel-nvme.o              <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/lnvm/lnvm-nvme.o                <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/memblaze/memblaze-nvme.o        <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/wdc/wdc-nvme.o                  <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/wdc/wdc-utils.o                 <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/huawei/huawei-nvme.o            <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/netapp/netapp-nvme.o            <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/toshiba/toshiba-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/micron/micron-nvme.o            <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/seagate/seagate-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/virtium/virtium-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/shannon/shannon-nvme.o          <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/dera/dera-nvme.o                <span style="color:#4070a0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0;font-weight:bold"></span>        plugins/todd/todd-nvme.o
+</span></span></code></pre></div></li>
+<li>
+<p>컴파일/설치/실행</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007020">pwd</span>
+</span></span><span style="display:flex;"><span>/root/nvme-cli
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># run on root permission state!</span>
+</span></span><span style="display:flex;"><span>make clean
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span>make install
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># run </span>
+</span></span><span style="display:flex;"><span>/usr/sbin/nvme
+</span></span><span style="display:flex;"><span>nvme todd list
+</span></span></code></pre></div></li>
+</ul>
+
+
+</br>
+<p>&nbsp;</p>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-cybertramp-net';
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://cybertramp.net/lib/jquery.min.js"></script> 
+<script src="https://cybertramp.net/lib/popper.min.js"></script> 
+<script src="https://cybertramp.net/js/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="../../plugins/lunr.min.js"></script>
+<script type="text/javascript" src="../../plugins/auto-complete.js"></script>
+<link href="../../plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/cybertramp.net\/";
+  
+</script>
+<script type="text/javascript" src="../../plugins/search.js"></script>
+
+
+<script type="text/javascript" src="../../plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+
+</body>
+</html>

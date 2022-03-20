@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>os on Cybertramp Blog</title>
+    <link>https://cybertramp.net/categories/os/</link>
+    <description>Recent content in os on Cybertramp Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>뮤텍스(Mutex)와 세마포어(Semaphore)</title>
+      <link>https://cybertramp.net/posts/20220103_001/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20220103_001/</guid>
+      <description>뮤텍스(Mutex) Mutual Exclusion(상호 배제)를 뜻하는 말로 Critical Section을 사지는 쓰레드들의 Running Time이 서로 겹치지 않도록 해주는 기법 1개의 쓰레드만이 공유 자원에 접근할 수 있도록 함.
+Lock, Unlock 개념을 사용하므로, 이진 세마포어와 같은 개념
+세마포어(Semaphore) 공유 자원에 여러 프로세스가 접근하는 것을 막는 것 현재 공유 자원의 상태를 나타내는 Counter 변수를 사용(커널에 값으로 존재)
+뮤텍스와 세마포어의 차이 뮤텍스는 오직 1개의 프로세스 혹은 스레드만이 공유 자원 접근 가능, 프로세스 단 관리(타 프로세스 내부 변수 접근 불가) 세마포어는 지정된 변수의 값만큼 접근 가능, 커널 단 관리(타 프로세스 제어 가능)</description>
+    </item>
+    
+  </channel>
+</rss>

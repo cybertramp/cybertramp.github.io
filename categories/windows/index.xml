@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Cybertramp Blog</title>
+    <link>https://cybertramp.net/categories/windows/</link>
+    <description>Recent content in windows on Cybertramp Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cybertramp.net/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WezTerm Configure</title>
+      <link>https://cybertramp.net/posts/20220203_001/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20220203_001/</guid>
+      <description>Wez&amp;rsquo;s Terminal Emulator의 Config file 이다.
+lua 언어로 되어 있으며, 윈도우에서의 설정 파일 기본 위치는 C:\Program Files\WezTerm\wezterm.lua 이다.
+설정 파일 참고: [참고](Lua Reference - Wez&amp;rsquo;s Terminal Emulator (wezfurlong.org))
+아래는 내가 사용하는 Config 파일이다. (20220203 기준)
+local wezterm = require &amp;#39;wezterm&amp;#39;;  return {  default_prog = {&amp;#34;C:\\Windows\\system32\\wsl.exe&amp;#34;, &amp;#34;-d&amp;#34;, &amp;#34;Ubuntu-20.04&amp;#34;},  font = wezterm.font(&amp;#34;D2Coding&amp;#34;),  font_size = 10.0,  color_scheme = &amp;#34;Dracula&amp;#34;,  launch_menu = { 	{ 	label = &amp;#34;Debugging PC&amp;#34;, 	args = {&amp;#34;ssh&amp;#34;,&amp;#34;root@10.</description>
+    </item>
+    
+    <item>
+      <title>wsl 커맨드로 현재 위치 열리게 하기</title>
+      <link>https://cybertramp.net/posts/20220202_002/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20220202_002/</guid>
+      <description>WSL에서 다음과 같이 설정해두면 된다.
+alias open=&amp;#34;explorer.exe&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>WSL1 vs WSL2</title>
+      <link>https://cybertramp.net/posts/20210822_003/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20210822_003/</guid>
+      <description>WSL 차이 WSL은 hyper-v 사용하지 않았음 WSL2는 Hyper-v 기반이라 WSL2를 사용하면 virtualbox, vmware를 사용할 수 없었으나, 현재는 virtualbox, vmware가 hyper-v를 사용해도 동작되게 변경됨
+WSL1은 리눅스 시스템 콜을 NT 커널에서 구현하는 방식 WSL2는 MS가 이짓 하다가 안되겠다 싶어서 리눅스 커널 통째로 하이퍼바이저에 올림</description>
+    </item>
+    
+    <item>
+      <title>Installation - Windows Terminal(use powershell)</title>
+      <link>https://cybertramp.net/posts/20210609_002/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20210609_002/</guid>
+      <description>Microsoft Store가 아닌 Powershell로 Windows Terminal을 설치하는 방법이다.
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))  choco install microsoft-windows-terminal </description>
+    </item>
+    
+    <item>
+      <title>Windows Terminal에서 시작 디렉토리 지정하기</title>
+      <link>https://cybertramp.net/posts/20191121_001/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20191121_001/</guid>
+      <description>Windows Terminal을 설치하고 실행하면 경로가 윈도우의 홈 디렉토리로 시작하게 된다. 작업하는데 매번 해당 경로를 타고 다시 이동해야하는 번거로움을 줄이기 위해 설정한다.
+  기존 예제
+기존에는 &amp;quot;startingDirectory&amp;quot; 속성이 없어서 터미널 실행시 아래와 같은 위치로 시작한다.
+[설정된 속성]
+{  &amp;#34;guid&amp;#34;: &amp;#34;{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}&amp;#34;,  &amp;#34;hidden&amp;#34;: false,  &amp;#34;name&amp;#34;: &amp;#34;Ubuntu-18.04&amp;#34;,  &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, [터미널 시작시]
+paran_son@pandorica:/mnt/c/Users/paran_son$   위치를 WSL 내 사용자 홈 디렉토리로 변경
+ 여기서 home 디렉토리 아래 사용자명은 WSL 내 사용자 명으로 설정해주어야 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

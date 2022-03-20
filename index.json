@@ -18,7 +18,7 @@
 	"title": "",
 	"tags": null,
 	"description": "",
-	"content": "Hi! This site is cybertramp\u0026#39;s private space. 😁 I like anything computer-related.  If you would like to visit the blog you used before, please refer to the address below.  cybertramp.tistory.com  Thanks!   Site History\n# 2022.03.20 - update: image link - update: disqus - design: menu by category - update: old post - util: create site deploy script - util: restart use typora✨ # 2022.02.20 - post 업데이트 및 테마 재조정 - profile 페이지 추가 # 2022.01.19 - 블로그 다시 시작 - 디자인 최적화    "
+	"content": "Hi! This site is cybertramp\u0026#39;s private space. 😁 I like anything computer-related.  If you would like to visit the blog you used before, please refer to the address below.  cybertramp.tistory.com  Thanks!   Site History\n# 2022.03.20 - update: image link - update: disqus - design: menu by category - update: old post - util: create site deploy script - util: restart use typora✨  # 2022.02.20 - post 업데이트 및 테마 재조정 - profile 페이지 추가  # 2022.01.19 - 블로그 다시 시작 - 디자인 최적화    "
 },
 {
 	"uri": "https://cybertramp.net/categories/",
@@ -126,6 +126,13 @@
 	"content": ""
 },
 {
+	"uri": "https://cybertramp.net/posts/20220320_005/",
+	"title": "GoLang에서 import된 다른 소스 코드의 변수 또는 함수 접근",
+	"tags": null,
+	"description": "",
+	"content": "Go언어로 작성시 2번 이나 삽질한 내용이다.\n참고\nGo언어에서 다른 소스코드의 변수/함수를 사용하려면(import 한 상태에서) 무조건 식별자가 대문자로 시작해야 접근이 가능하다.\n"
+},
+{
 	"uri": "https://cybertramp.net/categories/linux/",
 	"title": "linux",
 	"tags": null,
@@ -173,13 +180,6 @@
 	"tags": null,
 	"description": "",
 	"content": "Go언어로 Windows Service 프로그램을 만들면서 알게된 내용이다.\n서비스 등록 sc.exe create \u0026#34;Go Windows Service\u0026#34; binPath= SERVICE_NAME\\SERVICE_NAME.exe sc.exe config SERVICE_NAME start=auto sc.exe description \u0026#34;Go Windows Service\u0026#34; \u0026#34;Go Windows Service Description\u0026#34; sc.exe start \u0026#34;Go Windows Service\u0026#34; 서비스 제거 sc.exe delete SERVICE_NAME GoLang 관련  service로 사용시 fmt 라이브러리 사용하면 service 동작안함 windows 경로시 서비스로 돌기때문에 상대 경로로 넣으면 파일 못 불러옴  "
-},
-{
-	"uri": "https://cybertramp.net/posts/20220320_005/",
-	"title": "Powershell에서 Service control",
-	"tags": null,
-	"description": "",
-	"content": "Go언어로 작성시 2번 이나 삽질한 내용이다.\n참고\nGo언어에서 다른 소스코드의 변수/함수를 사용하려면(import 한 상태에서) 무조건 식별자가 대문자로 시작해야 접근이 가능하다.\n"
 },
 {
 	"uri": "https://cybertramp.net/posts/20220103_003/",

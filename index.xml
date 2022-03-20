@@ -111,6 +111,17 @@ char fw[9] = {0, }; memset(fw, 0x0, sizeof(fw)+1); memcpy(fw, reason_identifier+
     </item>
     
     <item>
+      <title>GoLang에서 import된 다른 소스 코드의 변수 또는 함수 접근</title>
+      <link>https://cybertramp.net/posts/20220320_005/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cybertramp.net/posts/20220320_005/</guid>
+      <description>Go언어로 작성시 2번 이나 삽질한 내용이다.
+참고
+Go언어에서 다른 소스코드의 변수/함수를 사용하려면(import 한 상태에서) 무조건 식별자가 대문자로 시작해야 접근이 가능하다.</description>
+    </item>
+    
+    <item>
       <title>Map</title>
       <link>https://cybertramp.net/posts/20220103_005/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
@@ -149,17 +160,6 @@ nvm 설치 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/instal
       <guid>https://cybertramp.net/posts/20220320_004/</guid>
       <description>Go언어로 Windows Service 프로그램을 만들면서 알게된 내용이다.
 서비스 등록 sc.exe create &amp;#34;Go Windows Service&amp;#34; binPath= SERVICE_NAME\SERVICE_NAME.exe sc.exe config SERVICE_NAME start=auto sc.exe description &amp;#34;Go Windows Service&amp;#34; &amp;#34;Go Windows Service Description&amp;#34; sc.exe start &amp;#34;Go Windows Service&amp;#34; 서비스 제거 sc.exe delete SERVICE_NAME GoLang 관련  service로 사용시 fmt 라이브러리 사용하면 service 동작안함 windows 경로시 서비스로 돌기때문에 상대 경로로 넣으면 파일 못 불러옴  </description>
-    </item>
-    
-    <item>
-      <title>Powershell에서 Service control</title>
-      <link>https://cybertramp.net/posts/20220320_005/</link>
-      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cybertramp.net/posts/20220320_005/</guid>
-      <description>Go언어로 작성시 2번 이나 삽질한 내용이다.
-참고
-Go언어에서 다른 소스코드의 변수/함수를 사용하려면(import 한 상태에서) 무조건 식별자가 대문자로 시작해야 접근이 가능하다.</description>
     </item>
     
     <item>

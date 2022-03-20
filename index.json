@@ -64,7 +64,7 @@
 },
 {
 	"uri": "https://cybertramp.net/posts/20220202_003/",
-	"title": "vue3 관련 정보",
+	"title": "Vue3에서 webpack-bundle-analyzer 사용 방법",
 	"tags": null,
 	"description": "",
 	"content": "vue3에서 사용되는 라이브러리들의 용량을 한눈에 보게 해주는 webpack-bundle-analyzer 사용하기 위한 코드는 다음과 같다.\n// vite.config.ts import { defineConfig } from \u0026#39;vite\u0026#39; import vue from \u0026#39;@vitejs/plugin-vue\u0026#39; import { visualizer } from \u0026#39;rollup-plugin-visualizer\u0026#39;;  export default defineConfig({  plugins: [vue(), visualizer()] }) "
